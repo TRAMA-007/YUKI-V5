@@ -2531,7 +2531,7 @@ if (isBanChat) return reply(mess.bangc)
   
  *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
  for (let mem of participants) {
- teks += `» @${mem.id.split('@')[0]}\n`
+ teks += `💔 @${mem.id.split('@')[0]}\n`
  }
  A17.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
  }
@@ -2581,7 +2581,37 @@ let mentioned = participants.map(v => v.jid)
     }
 
     break
+case 'spotify':{
 
+    if (args.length == 0) return reply(`Example: ${prefix + command} https://open.spotify.com/track/0ZEYRVISCaqz5yamWZWzaA`)
+
+    url = args[0]
+
+    get_result = await fetchJson(`https://api.lolhuman.xyz/api/spotify?apikey=${lolkey}&url=${url}`)
+
+    get_result = get_result.result
+
+    ini_txt = `Title : ${get_result.title}\n`
+
+    ini_txt += `Artists : ${get_result.artists}\n`
+
+    ini_txt += `Duration : ${get_result.duration}\n`
+
+    ini_txt += `Popularity : ${get_result.popularity}\n`
+
+    ini_txt += `Preview : ${get_result.preview_url}\n`
+
+    thumbnail = await getBuffer(get_result.thumbnail)
+
+    await A17.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
+
+    get_audio = await getBuffer(get_result.link)
+
+    await A17.sendMessage(from, get_audio, audio, { mimetype: 'audio/mpeg', filename: `${get_result.title}.mp3`, quoted: mek})
+
+    }
+
+    break
 
 
 
@@ -3307,7 +3337,7 @@ Quality : ${resd.medias[0].quality}
 Size : ${resd.medias[0].formattedSize}
 _Click the button below to download_`
 let buttons = [
-{buttonId: `-fbdl ${resd.medias[1].url}`, buttonText: {displayText: 'QualityHD'}, type: 1}
+{buttonId: `.fbdl ${resd.medias[1].url}`, buttonText: {displayText: 'QualityHD'}, type: 1}
 ]
 let buttonMessage = {
 video: {url:resd.medias[0].url},
@@ -3328,7 +3358,7 @@ case 'fbddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `-menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `.menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -3355,8 +3385,8 @@ reply(mess.error)
  const A17tiktokop = musim_rambutan.result.watermark
 texttk = `_Please choose the button below_`
 let buttons = [
-{buttonId: `-ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
-{buttonId: `-ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
+{buttonId: `.ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
+{buttonId: `.ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
 ]
 let buttonMessage = {
 video: {url:A17tiktokop},
@@ -3416,13 +3446,13 @@ case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `-ytad ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1},
- {buttonId: `-ytvd ${text}`, buttonText: {displayText: '► Video'}, type: 1}
+ {buttonId: `.ytad ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1},
+ {buttonId: `.ytvd ${text}`, buttonText: {displayText: '► Video'}, type: 1}
 
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  _A17 Youtube Player 2.0_  」
+ caption: `「  Youtube Player 2.0_  」
 
 *Title :* ${anu.title}
 
@@ -3478,13 +3508,13 @@ case 'music': case 'p': case 'play': case 'song': case 'ytplay': {
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `-ytad2 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1},
- {buttonId: `-ytvd2 ${text}`, buttonText: {displayText: '► Video'}, type: 1}
+ {buttonId: `.ytad2 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1},
+ {buttonId: `.ytvd2 ${text}`, buttonText: {displayText: '► Video'}, type: 1}
 
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  A17 Youtube Downloader 2.0  」
+ caption: `「  Youtube Downloader 2.0  」
 
 *Title :* ${anu.title}
 
@@ -4018,7 +4048,7 @@ case 'trap' :
 reply(mess.waiting)
  waifudd = await axios.get(`https://waifu.pics/api/nsfw/${command}`)       
  let trapbot = [
-    {buttonId: `-trap`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.trap`, buttonText: {displayText: `>>`}, type: 1},
     ]
   let button2Messages = {
    image: {url:waifudd.data.url},
@@ -4040,7 +4070,7 @@ case 'hneko' :
 reply(mess.waiting)
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/neko`)
  let hnekobot = [
-    {buttonId: `-${command}`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.${command}`, buttonText: {displayText: `>>`}, type: 1},
     ]
   let button3Messages = {
    image: {url:waifudd.data.url},
@@ -4062,7 +4092,7 @@ case 'hwaifu' :
 reply(mess.waiting)
     waifudd = await axios.get(`https://waifu.pics/api/nsfw/waifu`)         
  let nwaifubot = [
-    {buttonId: `-${command}`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.${command}`, buttonText: {displayText: `>>`}, type: 1},
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
@@ -4083,7 +4113,7 @@ case 'gasm':
 reply(mess.waiting)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
-        {buttonId: `-gasm`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `.gasm`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let buttonsssMessages = {
        image: {url:waifudd.data.url},
@@ -4104,7 +4134,7 @@ case 'smug2':
 reply(mess.waiting)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/smug`)
                            var wbuttsss = [
-        {buttonId: `-smug2`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `.smug2`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let button1ssMessages = {
        image: {url:waifudd.data.url},
@@ -4125,7 +4155,7 @@ case 'foxgirl':
 reply(mess.waiting)							
  waifudd = await axios.get(`https://nekos.life/api/v2/img/fox_girl`)
                            var wbuttsss = [
-        {buttonId: `-foxgirl`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `.foxgirl`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let button12ssMessages = {
        image: {url:waifudd.data.url},
@@ -4146,7 +4176,7 @@ case 'animenom' :
 reply(mess.waiting)
     waifudd = await axios.get(`https://waifu.pics/api/sfw/nom`)
  let xxhnekobot = [
-    {buttonId: `-animenom`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.animenom`, buttonText: {displayText: `>>`}, type: 1},
     ]
   let xx1button3Messages = {
    image: {url:waifudd.data.url},
@@ -4166,7 +4196,7 @@ case 'waifu3':
 reply(mess.waiting)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/waifu`)
                            var wbuttsss = [
-        {buttonId: `-waifu3`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `.waifu3`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let button112ssMessages = {
        image: {url:waifudd.data.url},
@@ -4187,7 +4217,7 @@ case 'crossplay': case 'crosplay': case 'cosplay':
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
                 const buttons = [
-        {buttonId: '-crossplay', buttonText: {displayText: '>>'}, type: 1},
+        {buttonId: '.crossplay', buttonText: {displayText: '>>'}, type: 1},
             ]               
         const cosplybutton = {
         image: {url: 'https://hanzz-web.herokuapp.com/api/randomimage/cosplay'},
@@ -4213,7 +4243,7 @@ case 'neko2':
 reply(mess.waiting)							
    waifud = await axios.get('https://waifu.pics/api/sfw/neko')
                 var wbutsss = [
-        {buttonId: `-neko2`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `.neko2`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let buttonssMessage = {
        image: {url:waifud.data.url},
@@ -4238,7 +4268,7 @@ case 'tickle':
 reply(mess.waiting)							
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
-        {buttonId: `-${command}`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let buttonssMessages = {
        image: {url:waifudd.data.url},
@@ -4521,7 +4551,7 @@ if (!m.isGroup) return replay(mess.grouponly)
 reply(mess.waiting)							
 ud = await axios.get('https://waifu.pics/api/sfw/megumin')
 var wbutsss = [
-    {buttonId: `-megumin`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.megumin`, buttonText: {displayText: `>>`}, type: 1},
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
@@ -4542,7 +4572,7 @@ case 'awoo':
     reply(mess.waiting)						
  waifudd = await axios.get(`https://waifu.pics/api/sfw/awoo`)
  var wbuttsss = [
-    {buttonId: `-awoo`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.awoo`, buttonText: {displayText: `>>`}, type: 1},
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
@@ -4572,7 +4602,7 @@ const wall = new AnimeWallpaper();
             .catch(() => null);
 const i = Math.floor(Math.random() * wallpaper.length);
 var walb = [
-        {buttonId: `-animewall2 ${q}`, buttonText: {displayText: `>>`}, type: 1},        
+        {buttonId: `.animewall2 ${q}`, buttonText: {displayText: `>>`}, type: 1},        
         ]
       let wal = {
        image: {url:wallpaper[i].image},
@@ -4678,7 +4708,7 @@ case 'waifu' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/waifu')
  var wbuttsssr = [
-    {buttonId: `-waifu`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.waifu`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
@@ -4699,7 +4729,7 @@ case 'neko' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/neko')
  var wbuttsssr = [
-    {buttonId: `-neko`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.neko`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let buttonMessagessf = {
         image: {url:waifuddd.data.url},
@@ -4721,7 +4751,7 @@ case 'loli' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
  var wbuttsssr = [
-    {buttonId: `-loli`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `.loli`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let buttonMessagessfgr = {
         image: {url:waifuddd.data.url},
@@ -4800,12 +4830,12 @@ await sleep(1500)
 let btn = [{
 quickReplyButton: {
 displayText: '💡 Menu 💡',
-id: '-menu'
+id: '.menu'
 }  
 }, {
 quickReplyButton: {
 displayText: 'Bot Owner',
-id: '-owner'
+id: '.owner'
 }
 }]
 let txt = `「 *${global.OwnerName}'s Broadcast* 」\n\n${text}`
@@ -4823,7 +4853,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
 const helpmenu = `Hemlo *${pushname}* Dear...!! ,
 
 │───────────────────────│
-┠⬡│▸ I am *A17*, a Bot Developed by *Kai*.
+┠⬡│▸ I am *ghost*, a Bot Developed by *Shubham*.
 │───────────────────────│
 │╭────────────────···▸
 ┠─────═[ *TODAY* ]═────
@@ -4994,7 +5024,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ,
 ⬡│▸
 ⬡│▸
 ⬡│▸ 『  *${global.BotName}*  』
-⬡│▸    Developed By: *Kai*
+⬡│▸    Developed By: *Shubham*
 ⬡│▸
 ⬡│▸ 🌹 To use any of these commands type 
 ⬡│▸ " *${prefix}<Command name>* ".
@@ -5005,7 +5035,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ,
     
 
  let buttonshelpm = [
-    {buttonId: `-owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
+    {buttonId: `.owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/A17_2.mp4'),gifPlayback:true,
@@ -5031,7 +5061,7 @@ case '':
  const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
      
          let butRun = [
-                {buttonId: `-help`, buttonText: {displayText: 'Help'}, type: 1}
+                {buttonId: `.help`, buttonText: {displayText: 'Help'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/A17.mp4'),gifPlayback:true,
@@ -5138,7 +5168,7 @@ case 'weather':
     reply(`Running repl....Please wait until repl.it responds...`)						
     var replqr =  await getBuffer(`https://miku-qr--fantox001.repl.co/`)
                                var qrbutton = [
-            {buttonId: `-qr`, buttonText: {displayText: `Re-run Repl`}, type: 1}
+            {buttonId: `.qr`, buttonText: {displayText: `Re-run Repl`}, type: 1}
             ]
           let bmffg = {
            image: replqr,
