@@ -7,20 +7,20 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['916297175943']
-global.OwnerNumber = ['916297175943']
-global.ownertag = ['916297175943']
-global.BotName = "A17"
+global.Owner = ['917798203711']
+global.OwnerNumber = ['917798203711']
+global.ownertag = ['917798203711']
+global.BotName = "𓄂⍣⃝🇬𝚑𝚘𝚜𝚝 ×͜×"
 global.packname = "A17 bot"
-global.author = "By: Kai"
-global.OwnerName = "Kai"
-global.BotSourceCode = "https://github.com/Kai0071/A17"
+global.author = "By: Shubham"
+global.OwnerName = "Shubham"
+global.BotSourceCode = "https://github.com/Kai0071"
 global.SupportGroupLink = "https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q"
 global.sessionName = "session"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['-'] 
+global.prefa = ['.'] 
 
 
 global.location = "West Bengal, India"
