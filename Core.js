@@ -180,6 +180,7 @@ const isMedia = /image|video|sticker|audio/.test(mime)
 const messagesD = body.slice(0).trim().split(/ +/).shift().toLowerCase()
 const groupMetadata = m.isGroup ? await A17.groupMetadata(m.chat).catch(e => {}) : ''
 const groupName = m.isGroup ? groupMetadata.subject : ''
+const groupDescription = m. isGroup ? groupMetadata.desc : ''
 const participants = m.isGroup ? await groupMetadata.participants : ''
 const groupAdmins = m.isGroup ? await participants.filter(v => v.admin !== null).map(v => v.id) : ''
 const groupOwner = m.isGroup ? groupMetadata.owner : ''
@@ -2970,7 +2971,17 @@ case 'spotify':{
      }
      }
      break
-
+case 'description': {
+	   if (isBan) return reply(mess.ban)
+	if (isBanChat) return reply(mess.banChat)
+            if (!m.isGroup) return replay(`${mess.group}`)
+            let jawab = `ㅤ ㅤ࿙⳼ 𝗗𝗘𝗦𝗖𝗥𝗜𝗣𝗧𝗜𝗢𝗡 ⳹࿚\n\n─────────────────────\n\n${groupMetadata.desc}\n\n─────────────────────\n\n_${pushname}_ 𝘩𝘦𝘳𝘦'𝘴 𝘰𝘶𝘳 𝘨𝘳𝘰𝘶𝘱 𝘥𝘦𝘴𝘤𝘳𝘪𝘱𝘵𝘪𝘰𝘯 𝘣𝘢𝘣𝘺❤`
+            let buttons = [
+{buttonId: `${prefix}owner`, buttonText: {displayText: '𝘖𝘸𝘯𝘦𝘳 𝘰𝘧 𝘵𝘩𝘪𝘴 𝘴𝘦𝘹𝘺 𝘽𝙤𝙩😚'}, type: 1}
+]
+                    await AnyaPika.sendButtonText(m.chat, buttons, jawab, footer, m)
+            }
+            break
      case 'promote': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
