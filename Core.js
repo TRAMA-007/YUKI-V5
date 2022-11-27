@@ -35,6 +35,8 @@ const emoji = new EmojiAPI()
 const { smsg, formatp, tanggal, GIFBufferToVideoBuffer, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom } = require('./lib/myfunc')
 const { aiovideodl } = require('./lib/scraper.js')
 const cheerio = require ("cheerio");
+const eco = require('discord-mongoose-economy')
+const ty = eco.connect('mongodb+srv://Arch:1t6l2G0r6nagLlOb@cluster0.gedh4.mongodb.net/?retryWrites=true&w=majority');
 const textpro = require('./lib/textpro')
 const { detikNews } = require('./lib/detik')
 const { wikiSearch } = require('./lib/wiki.js');
@@ -1408,14 +1410,8 @@ for (let anju of xeonyaudio){
     if (smallinput.includes('hello')) {
       reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
     } 
-	
-
-	
-	if (smallinput.includes('bot')) {
-      reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
-    } 
-	
-	 if (smallinput=='Kai') {
+		
+	 if (smallinput=='kai') {
         reply (`*My Boss is lost in another Multiverse, I lost contact with him...*`)
     }
 	
@@ -1426,18 +1422,14 @@ for (let anju of xeonyaudio){
     }
     
 	
-	 if (smallinput=='kai') {
-        reply (`*offline*`)
+	
+	 if (smallinput=='a17') {
+        reply ('Yes I am Alive 🫂')
     }
 	
 	 if (smallinput=='ping') {
-        reply (`*pong*`)
+        reply ('Hey ${pushname} Pong ${latensie.toFixed(4)} ms')
     }
-	
-	 if (smallinput=='a17') {
-        reply (`*yes*`)
-    }
-	
 
     if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
       reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
@@ -1445,7 +1437,7 @@ for (let anju of xeonyaudio){
 
 	
 	if (smallinput.includes('good afthernoon')) {
-      reply (`Huh ${pushname} 😇. Wishing you an enjoyable afternoon too.`);
+      reply ('Huh ${pushname} 😇. Wishing you an enjoyable afternoon too.');
     }
 	
 	
@@ -1555,7 +1547,147 @@ let buttonspro = [
 		
 		
 		
+//game
+		
+      case'daily': case 'reward': {
+	if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+        let user = m.sender
+	const cara = "cara"
+	const daily  = await eco.daily(user, cara, 999); //give 999 for daily, can be changed
+	
+	        if (daily.cd) return replay(`You already claimed daily for today, come back in ${daily.cdL}`); //cdL is already formatted cooldown Left
+	
+            replay(`You claimed 💎${daily.amount} for daily`);        
+}
+break
+		
+				
 
+  case'wallet':  case 'purse': {
+
+        if (isBan) return reply(mess.banned)	 			
+
+        if (isBanChat) return reply(mess.bangc)
+
+	if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+
+    const user = m.sender
+
+    const cara = "cara"
+
+    const balance = await eco.balance(user, cara); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
+
+    await replay(`👛 ${pushname}'s Purse:\n\n_💎${balance.wallet}_`);
+
+}
+
+break
+
+    	
+	case'bank':  case 'levee': {
+	if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+    const user = m.sender
+    const cara = "cara"
+    const balance = await eco.balance(user, cara); //Returns wallet, bank, and bankCapacity. Also creates a USer if it doesn't exist.
+    await replay(`🏦 ${pushname}'s Bank:\n\n_💎${balance.bank}/${balance.bankCapacity}_`); 
+}
+break
+		
+		
+		
+		
+	case'capacity':  case 'bankupgrade': {
+	//if (!isCreator) return replay(mess.botowner)
+	if (!text) return replay(`💴 Bank-capacity 💳\n\n1 | 1000 sp = 💎100\n\n2 | 100000 sp = 💎1000\n\n3 | 10000000 sp = 💎10000000\n\nExample- ${prefix}capacity 1 OR ${prefix}bankupgrade 1000`)	
+	if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        const user = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
+	const cara = "cara"
+	let value = text.trim();
+	let k = parseInt(value)
+	const balance  = await eco.balance(user, cara) 
+  switch (value) {
+          case '1000':
+          case '1':
+          if (k > balance.wallet ) return replay(`You need to pay 💎100 to increase bank capacity ~ 1000 sp`);
+            const deduct1 = await eco.deduct(user, cara, 100);
+            const add1 = eco.giveCapacity(user, cara, 1000); 
+                await replay(`1000 💎diamond storage has been added in ${pushname} bank`)
+     
+                break	
+		
+		
+		  
+		  
+	case'deposit':  case 'pay-in': {
+        if (isBan) return reply(mess.banned)	 			
+        if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+		if (!text) return replay("Provide the amount you want to deposit!");
+		const texts = text.trim();
+		const user = m.sender;
+		const cara = 'cara'
+        const deposit = await eco.deposit(user, cara, texts);
+            if(deposit.noten) return replay('You can\'t deposit what you don\'t have.'); //if user states more than whats in his wallet
+             replay(`Successfully Deposited 💎${deposit.amount} to your bank.`)
+		
+}
+break	
+		
+	
+		  
+		  
+		case'withdraw':  case 'withdrawal': {
+      if (isBan) return reply(mess.banned)	 			
+      if (isBanChat) return reply(mess.bangc)
+      if (m.quoted?.sender) m.mentionedJid.push(m.quoted.sender)
+        const user = m.sender
+		if (!text) return replay("Provide the amount you want to withdraw!");
+		const query = text.trim();
+        const cara = 'cara'
+        const withdraw = await eco.withdraw(user, cara, query);
+        if(withdraw.noten) return replay('🏧 Insufficient fund in bank'); //if user states more than whats in his wallet
+        const add = eco.give(user, cara, query);
+          replay(`🏧 ALERT  💎${withdraw.amount} has been added in your wallet.`)
+        
+}
+break  
+	
+		  
+		  
+		  
+		case'rob':  case 'attack': {
+	if (!text) return replay(`Use ${prefix}rob @user`)
+	const target =
+			             m.quoted && m.mentionedJid.length === 0
+			             ? m.quoted.sender
+			             : m.mentionedJid[0] || null;    
+           if (!target || target === m.sender) return replay("what are you trying to do!")
+           if (m.quoted?.sender && !m.mentionedJid.includes(m.quoted.sender)) m.mentionedJid.push(m.quoted.sender)
+        while (m.mentionedJid.length < 2) m.mentionedJid.push(m.sender)
+        const cara = "cara"
+        const user1 = m.sender
+        const user2 = target
+	    const k = 250
+	const balance1  = await eco.balance(user1, cara)
+	const balance2  = await eco.balance(user2, cara)
+	const typ = ['ran','rob','caught'];
+    const random = typ[Math.floor(Math.random() * typ.length)];
+    if (k > balance1.wallet) return replay(`☹️ You don't have enough money to pay incase you get caught`);
+    if (k > balance2.wallet) return replay(`Sorry, your victim is too poor 🤷🏽‍♂️ let go.`);
+    let tpy = random
+  switch (random) {
+          case 'ran':
+                await replay(`Your victim escaped, be more scaryðŸ˜¤ next time.`)
+     
+                break  
+		  
+		  
+		  
+		  
+		
 		
 case 'banchat': case 'bangroup':{
 if (isBan) return reply(mess.banned)	 			
@@ -1585,6 +1717,7 @@ replay('This Group has been *unbanned* from using me!')
   }
   }
   break
+		  
 
 case 'support': case 'supportgc':
     
@@ -1943,6 +2076,62 @@ await A17.sendMessage(m.chat, { delete: key })
  A17.sendText(m.chat, '  「 *Now Online Members* 」\n\n' + online.map(v => `${liston++} . @` + v.replace(/@.+/, '')).join`\n`, m, { mentions: online })
  }
  break
+		
+	
+		
+		
+	case "pp": case "setdp":
+      case "setbotpp":
+        {
+          if (!isCreator) return replay(mess.botowner);
+          if (!quoted)
+            return replay(`Send/Reply Image With Caption ${prefix}setbotpp`);
+          if (!/image/.test(mime))
+          return replay(`Send/Reply Image With Caption ${prefix}setbotpp`);
+          if (/webp/.test(mime))
+          return replay(`Send/Reply Image With Caption ${prefix}setbotpp`);
+          let media = await A17.downloadAndSaveMediaMessage(quoted);
+          await A17.updateProfilePicture(botNumber, {
+            url: media,
+          }).catch((err) => fs.unlinkSync(media));
+          replay(`*✨ ${pushname}...!! My Profile Pic Updated ✨*`);
+        }
+         break;
+		
+		
+
+		
+		
+		
+		
+		case 'status': case 'post': {
+        if (!isCreator) return replay(mess.owner)
+        if (!quoted) return replay(`Send/Reply Image With Caption ${prefix}status`)
+        if (/video/.test(mime)) {
+            if ((quoted.msg || quoted).seconds > 30) return reply('Maximum 30 seconds video is allowed!')
+        }
+        const messageType = Object.keys (m.message)[0]
+        if (messageType === 'imageMessage') {
+            const media = await downloadMediaMessage(m,'media',{ },{ logger,reuploadRequest: sock.updateMediaMessage})
+            await writeFile('./image.jpeg', media)
+            await A17.sendMessage(botNumber, 'status@broadcast',  { url: './image.jpeg', media}).catch((err) => fs.unlinkSync(media))
+           replay(`*✨ ${pushname}...!! Posted On My Status ✨*`);
+        }
+        else if (messageType === 'videoMessage') {
+            const media = await downloadMediaMessage(m,'media',{ },{ logger,reuploadRequest: sock.updateMediaMessage})
+            await writeFile('./video.mp4', media)
+            await A17.sendMessage(botNumber, 'status@broadcast',  { url: 'video.mp4', media}).catch((err) => fs.unlinkSync(media))
+		replay(`*✨ ${pushname}...!! Posted On My Status ✨*`);
+        }
+        else {
+            replay(`an error occurred`)
+        }
+
+ }
+ break
+		
+		
+		
 		
 		
 		
@@ -2546,6 +2735,36 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
+		
+		
+		
+		
+		
+		
+		case'tagadmins': case 'admins': case 'admin': {
+    if (isBan) return reply(mess.banned)	 			
+ if (isBanChat) return reply(mess.bangc)
+ if (!m.isGroup) return replay(mess.grouponly)
+ if (!text) return replay(`*Please quote or write a meaningful message to tag admins to*`)
+ let teks = `*「 Tag Admins 」*
+  
+ *Message : ${text}*\n\n`
+ for (let mem of groupAdmins) {
+ teks += `🎀 @${mem.split('@')[0]}\n`
+ }
+ A17.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
+ }
+ break
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 /*
      case 'purge':{
         if (isBan) return reply(mess.banned)	 			
