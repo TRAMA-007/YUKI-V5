@@ -156,12 +156,17 @@ I am *A17 Bot*, Welcome to ${metadata.subject}.
 *Group Description:*
 ${metadata.desc}
 `
-
+let buttons = [
+{buttonId: `-menu`, buttonText: {displayText: '𝘔𝘦𝘯𝘶 🍓'}, type: 1},
+{buttonId: `-description`, buttonText: {displayText: '𝘎𝘳𝘰𝘶𝘱 𝘥𝘦𝘴𝘤𝘳𝘪𝘱𝘵𝘪𝘰𝘯 🧾'}, type: 1},
+{buttonId: `-remove-me`, buttonText: {displayText: '𝘗𝘭𝘦𝘢𝘴𝘦 𝘳𝘦𝘮𝘰𝘷𝘦 𝘮𝘦 🥺'}, type: 1}
+]
     let buttonMessage = {
     image: await getBuffer(ppgroup),
     mentions: [num],
     caption: A17text,
     footer: `${global.BotName}`,
+    buttons: buttons,
     headerType: 4,
     }
 A17.sendMessage(anu.id, buttonMessage)
@@ -172,12 +177,17 @@ Okay Bye 👋, @${WAuserName.split("@")[0]},
 
 I hope you will come back soon, but You will be missed!
 `
-
+let buttons = [
+{buttonId: `-menu`, buttonText: {displayText: '𝘔𝘦𝘯𝘶 🍓'}, type: 1},
+{buttonId: `-description`, buttonText: {displayText: '𝘎𝘳𝘰𝘶𝘱 𝘥𝘦𝘴𝘤𝘳𝘪𝘱𝘵𝘪𝘰𝘯 🧾'}, type: 1},
+{buttonId: `-remove-me`, buttonText: {displayText: '𝘗𝘭𝘦𝘢𝘴𝘦 𝘳𝘦𝘮𝘰𝘷𝘦 𝘮𝘦 🥺'}, type: 1}
+]
     let buttonMessage = {
 	image:await getBuffer(ppuser),
     mentions: [num],
     caption: A17text,
     footer: `${global.BotName}`,
+    buttons: buttons,
     headerType: 4,
     
     }
