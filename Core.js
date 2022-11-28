@@ -4717,7 +4717,27 @@ console.log(musers)
 }
 break
 
+case 'jail': case 'pixelate': case 'blur': case 'imagesketch': case 'triggeredwebp': case 'shit': case 'burn': case 'invert': case 'wanted': case 'rip': {
 
+	if (isBan) return reply(mess.ban)	 			
+
+if (isBanChat) return reply(mess.banChat)
+
+	            if (!/image/.test(mime)) return reply(`*Send/Reply Image With Caption* ${prefix + command}`)
+
+	        	let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader2')
+
+                let media = await A17.downloadAndSaveMediaMessage(quoted)                
+
+                let anu = await TelegraPh(media)
+
+                let buf = await getBuffer(`https://cililitan.herokuapp.com/api/${command}?url=${anu}`)
+
+                A17.sendMessage(m.chat, { image: buf, caption: `Made by ${pushname}` }, { quoted: m}).catch ((err) => reply(mess.error))
+
+                }
+
+                break
 
 case 'yeet':
 case 'wink': case 'smile':
