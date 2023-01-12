@@ -10,14 +10,14 @@ global.antitags = true
 //global.autoTyping = false //auto tying in gc (true to on, false to off)
 //global.autoRecord = true //auto recording (true to on, false to off)
 
-global.Owner = ['916297175943','919362639362']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ['916297175943','919362639362']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ['916297175943']
+global.Owner = ['916202316574']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.OwnerNumber = ['916202316574']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.ownertag = ['916202316574']
 global.BotName = "A17"
 global.packname = "A17 bot"
-global.author = "By: Kai"
-global.OwnerName = "Kai"
-global.BotSourceCode = "https://github.com/Kai0071/A17"
+global.author = "By: Dipak"
+global.OwnerName = "Dev of A17"
+global.BotSourceCode = "https://github.com"
 global.SupportGroupLink = "https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q"
 global.sessionName = "session"
 
@@ -26,12 +26,12 @@ global.sessionName = "session"
 global.prefa = ['-'] 
 
 
-global.location = "West Bengal, India"
-global.reactmoji = "❤️"
-global.themeemoji = "💖"
+global.location = ", India"
+global.reactmoji = "💓"
+global.themeemoji = "👅"
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' }
 global.websitex = "https://github.com/Kai0071"
-global.lolhuman = "KaysaS"
+global.lolhuman = "DeepaK"
 
 
 global.BotLogo = fs.readFileSync("./Assets/pic1.jpg")
