@@ -1397,7 +1397,7 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Kai to take your WhatsApp usage into next level.
+    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: DIPAK to take your WhatsApp usage into next level.
         
        「 System Info 」
     
@@ -1427,7 +1427,7 @@ const ftroli = {
     
     Type *-menu* or press any button below to start using *${global.BotName}*
     
-    ©️ *${global.BotName}* All Rights Reserved by: *Kai*
+    ©️ *${global.BotName}* All Rights Reserved by: *DIPAK*
     `
         const qtod = m.quoted? "true":"false"
         
@@ -1517,10 +1517,10 @@ for (let anju of kaiaudio){
 	
 	let smallinput = budy.toLowerCase()
     if (smallinput.includes('hello')) {
-      reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+      reply (`Hello ${pushname}, I am ${BotName}. HOW ARE YOU...!?✨?`);
     } 
 		
-	 if (smallinput=='kai') {
+	 if (smallinput=='deepak') {
         reply (`*My Boss is lost in another Multiverse, I lost contact with him...*`)
     }
 	
@@ -1543,7 +1543,7 @@ if (smallinput=='ping') {
 
 	
     if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
-      reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
+      reply (`Good morning baby${pushname} ☺️. Have a great day 😇.`);
     }
 
 	
@@ -1559,7 +1559,7 @@ if (smallinput=='ping') {
     }
 
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-      reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
+      reply (`Mention not ${pushname} 😇.  .`);
     }
 	
 	
@@ -1572,7 +1572,7 @@ switch(command) {
     case 'sc': case 'script': case 'sourcecode': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    let { data } = await axios.get('https://api.github.com/repos/Kai0071/A17');
+    let { data } = await axios.get('NO REPO☹️🤣😂');
     teks = `*A17 Script*\n\n*Total Stars*: ${data.stargazers_count}⭐\n*Total Forks*: ${data.forks_count} forks\n*GitHub*: https://github.com/Kai0071/A17\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
     let buttons = [
     {buttonId: `${prefix}menu`, buttonText: {displayText: '🍁 Bot Menu 🍁'}, type: 1}
@@ -2171,12 +2171,12 @@ replay('This Group has been *unbanned* from using me!')
 
 case 'support': case 'supportgc':
     
-    reply(`*My developer's group:* http://gg.gg/12ewfs`)
+    reply(`*My developer's group:*https://chat.whatsapp.com/Ce6s5MExC0V71cA91eG5aK `)
     break
 
 case 'repo': case 'botrepo':
     
-    reply(`My Source Code is - https://github.com/Kai0071/A17`)
+    reply(`My Source Code is - ISS BETICHOD KO REPO CHIEYA 😂🤣🫵🏻🤣`)
     break
 
 case 'nsfwmenu':
@@ -5492,11 +5492,11 @@ break
 case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-A17.sendMessage(from, { react: { text: "📃" , key: m.key }})      
+A17.sendMessage(from, { react: { text: "📝" , key: m.key }})      
 const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 
 │───────────────────────│
-┠⬡│▸ ${pushname} I am *A17*, a Bot Developed by *Kai*.
+┠⬡│▸ ${pushname} I am *A17*, a Bot Developed by *Deepak*.
 │───────────────────────│
 │╭────────────────···▸
 ┠─────═[ *TODAY* ]═────
@@ -5695,7 +5695,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸
 ⬡│▸
 ⬡│▸ 『  *${global.BotName}*  』
-⬡│▸    Developed By: *Kai*
+⬡│▸    Developed By: *Dipak*
 ⬡│▸
 ⬡│▸ 🌹 To use any of these commands type 
 ⬡│▸ " *${prefix}<Command name>* ".
