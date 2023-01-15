@@ -5512,7 +5512,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ┴│▸ 
 ⬡│▸ *Bot usr name :* ${pushname} 
 ⬡│▸ *My prefix is :*  ${prefix}
-⬡│▸ *Owner name :* ${global.OwnerName} 
+⬡│▸ *Owner name :* DIPAK 
 ⬡│▸ *Bot speed :* ${latensie.toFixed(4)} ms 
 ⬡│▸ *Total Bot user :* ${Object.keys(global.db.users).length}
 ⬡│▸ *Bot runtime :* ${runtime(process.uptime())} 
@@ -5689,20 +5689,12 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ┠━━〈 ⚠️ *NSFW* ⚠️ 〉━━
 │╭───────────────···▸
 ┴│▸
-⬡│▸ 🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
-⬡│▸
-⬡│▸ 🍁 Then type " *${prefix}nsfwmenu* " for all NSFW commands.
-⬡│▸
-⬡│▸
-⬡│▸ 『  *${global.BotName}*  』
+⬡│▸ 🍁 『  *${global.BotName}*  』
+
 ⬡│▸    Developed By: *Dipak*
 ⬡│▸
-⬡│▸ 🌹 To use any of these commands type 
-⬡│▸ " *${prefix}<Command name>* ".
-⬡│▸
-⬡│▸ 🌹 To get Support Group link type " *${prefix}support* ".
-⬡│▸
-⬡│▸ 🌹 Type " *${prefix}help* " to get full command list.`
+⬡│▸ MADE WITH ❤️ BY DEEPAK`
+
     
 
  let buttonshelpm = [
