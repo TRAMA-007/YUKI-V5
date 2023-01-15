@@ -1533,7 +1533,7 @@ for (let anju of kaiaudio){
 	
 	
 	 if (smallinput=='a17') {
-        reply ('Yes I am Alive 🫂')
+        reply ('JAY SHREE RAM 🚩@${WAuserName.split("@")[0]}')
     }
 	
 	
@@ -1543,7 +1543,7 @@ if (smallinput=='ping') {
 
 	
     if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
-      reply (`Good morning baby${pushname} ☺️. Have a great day 😇.`);
+      reply (`Good morning baby ${pushname} 😗. Have a great day 😇.`);
     }
 
 	
