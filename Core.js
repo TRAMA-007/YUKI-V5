@@ -1517,7 +1517,7 @@ for (let anju of kaiaudio){
 	
 	let smallinput = budy.toLowerCase()
     if (smallinput.includes('hello')) {
-      reply (`Hello ${pushname}, I am ${BotName}. HOW ARE YOU...!?✨?`);
+      reply (`Hello ${pushname}, I am ${BotName}. How are you ...!?✨`);
     } 
 		
 	 if (smallinput=='deepak') {
@@ -1533,7 +1533,7 @@ for (let anju of kaiaudio){
 	
 	
 	 if (smallinput=='a17') {
-        reply ('JAY SHREE RAM 🚩${pushname}')
+        reply ('JAY SHREE RAM 🚩')
     }
 	
 	
