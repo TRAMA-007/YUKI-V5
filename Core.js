@@ -1533,7 +1533,7 @@ for (let anju of kaiaudio){
 	
 	
 	 if (smallinput=='a17') {
-        reply ('JAY SHREE RAM 🚩@${WAuserName.split("@")[0]}')
+        reply ('JAY SHREE RAM 🚩${pushname}')
     }
 	
 	
