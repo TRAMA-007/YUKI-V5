@@ -14,16 +14,16 @@ global.Owner = ['916202316574']  //If you want singal number so global.Owner = [
 global.OwnerNumber = ['916202316574']  //If you want singal number so global.Owner = ['916297175943'] Change into your number
 global.ownertag = ['916202316574']
 global.BotName = "A17"
-global.packname = "A17 bot"
-global.author = "By: Dipak"
-global.OwnerName = "Dev of A17"
+global.packname = "A17"
+global.author = "DEEPAK❤️"
+global.OwnerName = "ƊЄƔ ƠƑ ƛ17 ♡"
 global.BotSourceCode = "https://github.com"
 global.SupportGroupLink = "https://chat.whatsapp.com/EsNqFrGKxGXFrdwgRaQl9q"
 global.sessionName = "session"
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
-global.prefa = ['-'] 
+global.prefa = ['.'] 
 
 
 global.location = ", India"
@@ -62,15 +62,15 @@ global.ntilink = []
 
 global.mess = {
     jobdone: 'Job done...',
-    useradmin: 'Sorry, only *Group Admins* can use this command *Dear*!',
-    botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
+    useradmin: 'Sorry, BABY SIRF ADMIN CAN USE THIS COMMAND I HOPE U UNDERSTAND 😌 *Dear*!',
+    botadmin: 'Sorry, BABY PHLE ADMIN BANA DO PHIR MAAZE HONGE 😙.',
     botowner: 'Only my *Owner* can use this command, Yeah!',
     grouponly: 'This command is only made for *Groups*, Baka!',
     privateonly: 'This command is only made for *Private Chat*, Okey ?!',
     botonly: 'Only the *Bot itself* can use this command!',
-    waiting: ' Ruko Zara...',
+    waiting: ' Ruko baby.....😌',
     nolink: 'Please provide me *link*, Uff!',
-    error: 'An error occurd!',
+    error: 'BABY KUCH TOH GADBAD HAI SORRY!',
     banned: 'You are *Banned* fron using commands!, Haha',
     bangc: 'This Group is *Banned* from using Commands!',
     nonsfw: 'Dont be a pervert  Uff! This is not a NSFW enabled group!, Uff!,'
