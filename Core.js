@@ -1520,14 +1520,38 @@ for (let anju of kaiaudio){
       reply (`Hello ${pushname}, I am ${BotName}. How are you ...!?✨`);
     } 
 		
-	 if (smallinput=='deepak') {
-        reply (`*My Boss is lost in another Multiverse, I lost contact with him...*`)
+	 if (smallinput=='mahi') {
+        reply (`*AWWW 🥺💓 MAHI IS WIFEU OF MY OWNER DEEPAK SHARMA ❤️*`)
     }
 	
 	
 
     if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
-      reply (`Konichiwa ${pushname}, I am ${BotName}. How can i help you?`);
+      reply (`*╭─────═[ •.¸♡𝐈𝐍𝐓𝐑𝐎♡¸.•*]═─────⋆*
+
+*┴*
+
+*│⬡𝐇𝐈 𝐈'𝐌 𝐀17*
+
+*│⬡𝐀 𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 𝐁𝐎𝐓*
+
+*│⬡𝐓𝐘𝐏𝐄 .𝐌𝐄𝐍𝐔 𝐅𝐎𝐑 𝐌𝐘 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒*
+
+*│⬡𝐎𝐖𝐍𝐄𝐑 𝐃𝐄𝐄𝐏𝐀𝐊 𝐒𝐇𝐀𝐑𝐌𝐀*
+
+*│⬡𝐓𝐇𝐍𝐗 𝐓𝐎 𝐒𝐇𝐔𝐁𝐇𝐀𝐌 / 𝐊𝐀𝐈*
+
+*│⬡𝐒𝐏𝐄𝐂𝐈𝐀𝐋 𝐓𝐇𝐀𝐍𝐗 𝐓𝐎 𝐓𝐄𝐀𝐌 𝐄𝐑𝐑𝐎𝐑*
+
+*│⬡𝐄𝐍𝐉𝐎𝐘 𝐁𝐔𝐃𝐃𝐘 𝐇𝐀𝐕𝐄 𝐅𝐔𝐍 𝐖𝐈𝐓𝐇 𝐁𝐎𝐓*     
+
+┃┏━━━━━━━━━━━━━━━━━━━◆
+
+┣┫ ♡------ 𝐀17------✯
+
+┃┗┯━━━━━━━━━━━━━━━━━━◆                                                             
+
+*└─────────────────────┈ ✧*`);
     }
     
 	
@@ -1559,7 +1583,7 @@ if (smallinput=='ping') {
     }
 
     if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-      reply (`Mention not ${pushname} 😇.  .`);
+      reply (`Mention not ${pushname} 😇✨✌🏻  .`);
     }
 	
 	
@@ -2176,7 +2200,7 @@ case 'support': case 'supportgc':
 
 case 'repo': case 'botrepo':
     
-    reply(`My Source Code is - ISS BETICHOD KO REPO CHIEYA 😂🤣🫵🏻🤣`)
+    reply(`ISS BETICHOD KO REPO CHIEYA 😂🤣🫵🏻🤣`)
     break
 
 case 'nsfwmenu':
@@ -2546,7 +2570,7 @@ case 'listonline': case 'here':{
           await A17.updateProfilePicture(botNumber, {
             url: media,
           }).catch((err) => fs.unlinkSync(media));
-          replay(`*✨ ${pushname}...!! My Profile Pic Updated ✨*`);
+          replay(`*✨ ${pushname}...!! NEW PHOTO IS LOOKING SEXY 🌝❤️😙✨*`);
         }
          break;
 		
@@ -4483,7 +4507,7 @@ case 'charactercheck':
          "shout you bastard in front of your mom/papa",
          "change the name to i am idiot for 24 hours",
          "slap urself firmly and send the sound of slap through voice note😂",
-         "say i love the bot owner Kai through voice note",
+         "say i love the bot owner Dipak through voice note",
          "send your gf/bf pic here",
          "make any tiktok dance challenge video and put it on status, u can delete it after 5hrs",
          "breakup with your best friend for 5hrs without telling him/her that its a dare",
@@ -5496,7 +5520,7 @@ A17.sendMessage(from, { react: { text: "📝" , key: m.key }})
 const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 
 │───────────────────────│
-┠⬡│▸ ${pushname} I am *A17*, a Bot Developed by *Deepak*.
+┠⬡│▸ ${pushname} I am *A17*, a Bot Developed by *Deepak❤️*.
 │───────────────────────│
 │╭────────────────···▸
 ┠─────═[ *TODAY* ]═────
@@ -5515,7 +5539,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
 ⬡│▸ *Owner name :* DIPAK 
 ⬡│▸ *Bot speed :* ${latensie.toFixed(4)} ms 
 ⬡│▸ *Total Bot user :* ${Object.keys(global.db.users).length}
-⬡│▸ *Bot runtime :* ${runtime(process.uptime())} 
+⬡│▸ *Bot runtime :* 999999999⚡⚡ 
 ⬡│▸ *Platform :* Linux 
 ┬│▸
 │╰────────────────···▸
@@ -5698,7 +5722,7 @@ const helpmenu = `Hemlo *${pushname}* Dear...!! ${ucapanWaktu} ,
     
 
  let buttonshelpm = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: 'OWNER OF THE SEXY BOT 😚'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: 'owner oғ тнιѕ ѕeхy вoт 😚'}, type: 1}
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/A17_2.mp4'),gifPlayback:true,
