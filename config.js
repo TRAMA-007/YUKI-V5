@@ -26,11 +26,11 @@ global.sessionName = "session"
 global.prefa = ['.'] 
 
 
-global.location = ", India"
+global.location = "India"
 global.reactmoji = "💓"
 global.themeemoji = "👅"
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' }
-global.websitex = "https://github.com/Kai0071"
+global.websitex = "INDIA 🇮🇳"
 global.lolhuman = "DeepaK"
 
 
