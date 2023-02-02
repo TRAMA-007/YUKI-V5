@@ -1526,11 +1526,7 @@ for (let anju of kaiaudio){
 	
 	
 
-    if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
-      reply (`*Fuck you 😂🫣🫡*');
-    }
     
-	
 	
 	 if (smallinput=='a17') {
         reply ('JAY SHREE RAM 🚩')
