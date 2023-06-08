@@ -19,7 +19,7 @@ global.author = "By: @𝘾𝙖𝙇𝙮𝙥𝙨𝙤👤"
 global.OwnerName = "@𝘾𝙖𝙇𝙮𝙥𝙨𝙤👤"
 global.BotSourceCode = "https://github.com/Kai0071/A17"
 global.SupportGroupLink = "https://chat.whatsapp.com/LaIlzIJIK8e6QWXFss6rMb"
-global.sessionName = "session"
+global.sessionName = "cXpzampQY0o="
 
 // Prefix //
 // If you want to change the prefix, change it and also change all switch's button id from Core.js  otherwise buttons will not work //
