@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center">
    <a href="https://github.com/Kai0071">
     <img src="https://media1.giphy.com/media/XqVUeEK5Lt3VOGEzJj/giphy.gif" width="610">
@@ -247,24 +246,3 @@ Comment out/delete /* , */ the code form your Core.js line 224,332 in your own r
 </p>
 <h1 align="center"> ✧ Thanks To FantoX001 ✧
 </h1>
-
-
-
-
-    
-    
-
-    
-
-    
-
-
-
-
-
-
-
-
-=======
-# test
->>>>>>> 3b758e5d (Initial)
