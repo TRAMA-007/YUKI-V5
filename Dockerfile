@@ -14,8 +14,6 @@ RUN npm install
 
 COPY . .
 
-<<<<<<< HEAD
 CMD ["node", "."]
-=======
+
 CMD ["node", "."]
->>>>>>> 3b758e5d (Initial)
