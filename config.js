@@ -10,15 +10,15 @@ global.antitags = true;
 
 
 //
-global.Owner = ["916297175943","919362639362"]; //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ["916297175943","919362639362"];  //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ["916297175943"];
-global.BotName = "A17";
-global.packname = "A17 Bot";
-global.author = "By: Kai";
-global.OwnerName = "Kai";
-global.BotSourceCode = "https://github.com/Kai0071/A17";
-global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";
+global.Owner = ["917866052212","917866052212"]; //If you want singal number so global.Owner = ['917866052212'] Change into your number
+global.OwnerNumber = ["917866052212","917866052212"];  //If you want singal number so global.Owner = ['917866052212'] Change into your number
+global.ownertag = ["917866052212"];
+global.BotName = "Luffy";
+global.packname = "lxfxy";
+global.author = "By: luffy";
+global.OwnerName = "luffy";
+global.BotSourceCode = "https://chat.whatsapp.com/DgCL8yESWxBEMYxE8EmtJC";
+global.SupportGroupLink = "https://chat.whatsapp.com/DgCL8yESWxBEMYxE8EmtJC";
 global.sessionName = "session";
 
 
