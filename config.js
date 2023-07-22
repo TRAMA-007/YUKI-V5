@@ -10,15 +10,15 @@ global.antitags = true;
 
 
 //
-global.Owner = ["916297175943","919362639362"]; //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ["916297175943","919362639362"];  //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ["916297175943"];
+global.Owner = ["0742135085","0742135085"]; //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.OwnerNumber = ["0742135085","0742135085"];  //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.ownertag = ["0742135085"];
 global.BotName = "A17";
 global.packname = "A17 Bot";
 global.author = "By: Kai";
-global.OwnerName = "Kai";
+global.OwnerName = "Cyber PabuZa";
 global.BotSourceCode = "https://github.com/Kai0071/A17";
-global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";
+global.SupportGroupLink = "https://chat.whatsapp.com/FFF0ZEx3Odb9X54UjjZqGD";
 global.sessionName = "session";
 
 
