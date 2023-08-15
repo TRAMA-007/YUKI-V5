@@ -15,10 +15,10 @@ global.autoRecord = false; //auto recording (true to on, false to off)
 
 
 //
-global.Owner = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
+global.Owner ["923348552741"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.OwnerNumber ["923348552641"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.ownertag = ["923348552641"];
+global.OwnerName = "Abdul wahab";
 global.BotName = "A17";
 global.packname = "A17 Bot";  //Do not change.
 global.author = "By: Kai";   //Do not change.
