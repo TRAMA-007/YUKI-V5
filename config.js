@@ -15,9 +15,9 @@ global.autoRecord = false; //auto recording (true to on, false to off)
 
 
 //
-global.Owner = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ["916297175943"];
+global.Owner = ["apocalypse","apocalypse"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.OwnerNumber = ["6788_47803","678847803"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.ownertag = ["678847803"];
 global.OwnerName = "Kai";
 global.BotName = "A17";
 global.packname = "A17 Bot";  //Do not change.
