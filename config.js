@@ -15,31 +15,31 @@ global.autoRecord = false; //auto recording (true to on, false to off)
 
 
 //
-global.Owner = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
-global.BotName = "A17";
-global.packname = "A17 Bot";  //Do not change.
-global.author = "By: Kai";   //Do not change.
-global.BotSourceCode = "https://github.com/Kai0071/A17";  //Do not change.
-global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl"; 
+global.Owner = ["2347082252014","2349150538944"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.OwnerNumber = ["2347082252014","2349150538944"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.ownertag = ["2347082252014"];
+global.OwnerName = "Quadhir";
+global.BotName = "Dux";
+global.packname = "Dux Bot";  //Do not change.
+global.author = "By: Quadhir";   //Do not change.
+global.BotSourceCode = "https://github.com/Duxlin/A17";  //Do not change.
+global.SupportGroupLink = "https://chat.whatsapp.com/CeXB13i3F2MKwXa4c7tB9o"; 
 
 
-//global.sessionName = "session";
+//global.sessionName = "MWZrVnhrS1M=";
 
 
 // Set Here Prefix  //
-global.prefa = ["#"];
+global.prefa = ["."];
 global.openAiAPI = "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";
 
 
 //
-global.location = "Tata City, India";
+global.location = "Alien City, Pluto";
 global.reactmoji = "❤️";
 global.themeemoji = "💖";
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' };
-global.websitex = "https://github.com/Kai0071";
+global.websitex = "https://github.com/Duxlin";
 global.lolhuman = "KaysaS";
 
 
