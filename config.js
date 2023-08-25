@@ -15,10 +15,10 @@ global.autoRecord = false; //auto recording (true to on, false to off)
 
 
 //
-global.Owner = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
+global.Owner = ["94723737086","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.OwnerNumber = ["94723737086","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.ownertag = ["94723737086"];
+global.OwnerName = "chamiya";
 global.BotName = "A17";
 global.packname = "A17 Bot";  //Do not change.
 global.author = "By: Kai";   //Do not change.
@@ -30,12 +30,12 @@ global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";
 
 
 // Set Here Prefix  //
-global.prefa = ["#"];
+global.prefa = ["."];
 global.openAiAPI = "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";
 
 
 //
-global.location = "Tata City, India";
+global.location = "Tata City, lanka";
 global.reactmoji = "❤️";
 global.themeemoji = "💖";
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' };
