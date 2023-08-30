@@ -16,12 +16,12 @@ global.autoRecord = false; //auto recording (true to on, false to off)
 
 //
 global.Owner = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.OwnerNumber = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
+global.OwnerNumber = ["242065069943","242065069943"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number
+global.ownertag = ["242065069943"];
+global.OwnerName = "Murky Tomura shigaraki";
 global.BotName = "A17";
 global.packname = "A17 Bot";  //Do not change.
-global.author = "By: Kai";   //Do not change.
+global.author = "By: Murky Tomura shigaraki";   //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17";  //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl"; 
 
@@ -29,8 +29,8 @@ global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";
 //global.sessionName = "session";
 
 
-// Set Here Prefix  //
-global.prefa = ["#"];
+// Set Here Prefix  /?/
+global.prefa = ["?"];
 global.openAiAPI = "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";
 
 
