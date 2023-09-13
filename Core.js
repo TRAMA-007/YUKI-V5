@@ -2127,6 +2127,89 @@ var kairesult = pickRandom(nsfwdata)
 A17.sendMessage(m.chat, { caption: mess.success, image: { url: kairesult.url } }, { quoted: m })
 break;
 
+case 'xsearch': {
+  if (isBan) return reply(mess.banned);
+  if (isBanChat) return reply(mess.bangc);
+  if (!m.isGroup) return reply(mess.grouponly);
+  if (!AntiNsfw) return reply(mess.nonsfw);
+  A17.sendMessage(from, { react: { text: "🥵" , key: m.key }})
+
+  if (!q) return reply(`Please provide a query to search for on Xnxx. Example: ${prefix + command} Hot desi bhabi`);
+
+  const apiUrl = `https://guru-scrapper.cyclic.app/api/xnxxsearch?query=${encodeURIComponent(q)}`;
+
+  try {
+    const response = await fetch(apiUrl);
+
+    if (response.status === 200) {
+      const result = await response.json();
+      const maxResults = 5; // Limit the number of results to 5
+
+      if (result.data.length > 0) {
+        
+        const shuffledResults = result.data.sort(() => Math.random() - 0.5).slice(0, maxResults);
+
+        
+        let messageWithMentions = "Xnxx Search Results:\n";
+
+        for (const randomResult of shuffledResults) {
+          const title = randomResult.title;
+          const link = randomResult.link;
+
+          messageWithMentions += `${title}\nLink: ${link}\n\n`;
+        }
+
+        const me = m.sender;
+        await A17.sendMessage(m.chat, { text: messageWithMentions, mentions: [me] }, { quoted: m });
+      } else {
+        reply("No results found on xnxx for the provided query.");
+      }
+    } else {
+      reply("Sorry, I couldn't search xnxx at the moment.");
+    }
+  } catch (error) {
+    console.error(error);
+    reply("An error occurred while searching xnxx.");
+  }
+}
+break;
+
+case 'xdl': {
+  if (isBan) return reply(mess.banned);
+  if (isBanChat) return reply(mess.bangc);
+  if (!m.isGroup) return reply(mess.grouponly);
+  if (!AntiNsfw) return reply(mess.nonsfw);
+  A17.sendMessage(from, { react: { text: "🥵" , key: m.key }})
+
+  if (!q) return reply(`Please provide a valid Xnxx video link. Example: ${prefix + command} https://www.xnxx.com/video-l15xf47/mia_khalifa`);
+
+  const apiUrl = `https://guru-scrapper.cyclic.app/api/xnxxdl?url=${encodeURIComponent(q)}`;
+
+  try {
+    const response = await fetch(apiUrl);
+
+    if (response.status === 200) {
+      const result = await response.json();
+
+      if (result.data && result.data.high) {
+        const videoUrl = result.data.high;
+
+        
+        await A17.sendMessage(m.chat, { video: { url: videoUrl } }, { quoted: m });
+      } else {
+        reply("Failed to retrieve the high-quality video from Xnxx.");
+      }
+    } else {
+      reply("Sorry, I couldn't retrieve the video from Xnxx at the moment.");
+    }
+  } catch (error) {
+    console.error(error);
+    reply("An error occurred while retrieving the video from Xnxx.");
+  }
+}
+break;
+
+
 
 case 'ero':
   if (isBan) return reply(mess.banned); 			
