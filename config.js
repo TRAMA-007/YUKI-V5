@@ -17,11 +17,11 @@ global.statusseen = true;                 //This is the new variable for control
 
 
 //
-global.Owner = ["916297175943","919362639362"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.OwnerNumber = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
-global.BotName = "A17";
+global.Owner = ["27671437735","27671437735"];         //If you want singal number so global.Owner = ['27671437735'] Change into your number.
+global.OwnerNumber = ["27671437735","27671437735"];   //If you want singal number so global.Owner = ['27671437735'] Change into your number.
+global.ownertag = ["27671437735"];
+global.OwnerName = "yuspend2muchtimeintoilet";
+global.BotName = "Prowler🧩";
 global.packname = "A17 Bot";                             //Do not change.
 global.author = "By: Kai";                               //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
@@ -38,7 +38,7 @@ global.openAiAPI = "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";
 
 
 //
-global.location = "Tata City, India";                   
+global.location = "pietermaritzburg, SouthAfrica";                   
 global.reactmoji = "❤️";
 global.themeemoji = "💖";
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' };
