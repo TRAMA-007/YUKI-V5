@@ -18,7 +18,7 @@ const yargs = require("yargs/yargs");
 const kaitime = moment.tz('Asia/Kolkata').format('HH:mm:ss');
 const kaidate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY');
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss');
-const currentDate = new Date();
+const currentDate = new Date(25/09/2023);
 const options = { weekday: 'long' }; // Specify 'long' to get the full day name
 const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate);
 
