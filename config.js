@@ -11,19 +11,19 @@ global.antitags = true;
 
 //auto functioner
 global.autoTyping = false;                //auto tying by default off.
-global.autoRecord = false;                //auto recording by default off.
+global.autoRecord = true;                //auto recording by default off.
 global.groupevent = false;                //This is the new variable for controlling group event handling.
 global.statusseen = true;                 //This is the new variable for controlling status seen.
 
 
 //
-global.Owner = ["916297175943","919362639362"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.OwnerNumber = ["916297175943","919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
-global.BotName = "A17";
-global.packname = "A17 Bot";                             //Do not change.
-global.author = "By: Kai";                               //Do not change.
+global.Owner = ["27670821076","27670821076"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.OwnerNumber = ["27670821076","27670821076"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.ownertag = ["27670821076"];
+global.OwnerName = "𝓚𝓮𝓷𝓽𝓮𝓷𝓼𝓱𝓲 名誉";
+global.BotName = "Meio";
+global.packname = "𝓚𝓮𝓷𝓽𝓮𝓷𝓼𝓱𝓲 名誉";                             //Do not change.
+global.author = "By: Luke";                               //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl"; 
 
@@ -38,12 +38,12 @@ global.openAiAPI = "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";
 
 
 //
-global.location = "Tata City, India";                   
+global.location = "Eastwood, South Africa ";                   
 global.reactmoji = "❤️";
 global.themeemoji = "💖";
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' };
-global.websitex = "https://github.com/Kai0071";
-global.lolhuman = "KaysaS";
+global.websitex = "https://github.com/SpongeBoobiess";
+global.lolhuman = "Ahhhh!!";
 
 
 //
@@ -65,13 +65,13 @@ global.ntilinkall = []
 global.nticall = []
 global.ntwame = []
 global.nttoxic = []
-global.ntnsfw = []
-global.ntvirtex = []
-global.rkyt = []
-global.wlcm = []
-global.gcrevoke = []
-global.autorep = []
-global.ntilink = []
+global.ntnsfw = [false]
+global.ntvirtex = [true]
+global.rkyt = [true]
+global.wlcm = [true]
+global.gcrevoke = [true]
+global.autorep = [true]
+global.ntilink = [true]
 
 
 //
@@ -79,7 +79,7 @@ global.mess = {
     jobdone: 'Here you go...',
     useradmin: 'Sorry, only *Group Admins* can use this command *Baka*!',
     botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
-    botowner: 'Only my *Owner* can use this command, Baka!',
+    botowner: 'Only my *𝓚𝓮𝓷𝓽𝓮𝓷𝓼𝓱𝓲 名誉* can use this command, Baka!',
     grouponly: 'This command is only made for *Groups*, Baka!',
     privateonly: 'This command is only made for *Private Chat*, Baka!',
     botonly: 'Only the *Bot itself* can use this command!',
