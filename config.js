@@ -9,7 +9,7 @@ global.antitags = true;
 
 
 //auto functioner
-global.autoTyping = false;                //auto tying by default off.
+global.autoTyping = true;                //auto tying by default off.
 global.autoRecord = false;                //auto recording by default off.
 global.groupevent = false;                //This is the new variable for controlling group event handling.
 global.statusseen = true;                 //This is the new variable for controlling status seen.
@@ -17,15 +17,15 @@ global.autoreadgc = true;
 
 
 //
-global.prefa = ["."];                                    //Default prefix here. you can change if you want.
+global.prefa = ["-"];                                    //Default prefix here. you can change if you want.
 
 
 //
-global.Owner = ["916297175943", "919362639362"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.OwnerNumber = ["916297175943", "919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
-global.BotName = "A17";
+global.Owner = ["254716637803", "254716637803"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.OwnerNumber = ["916297175943", "254716637803"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.ownertag = ["254716637803"];
+global.OwnerName = "kingpin ali";
+global.BotName = "sa va ge ";
 global.packname = "A17 Bot";                             //Do not change.
 global.author = "By: Kai";                               //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
@@ -80,18 +80,18 @@ global.ntilink = []
 //
 global.mess = {
   jobdone: 'Here you go...',
-  useradmin: 'Sorry, only *Group Admins* can use this command *Baka*!',
+  useradmin: 'Sorry, only *Group Admins* can use this command *mzee*!',
   botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
-  botowner: 'Only my *Owner* can use this command, Baka!',
-  grouponly: 'This command is only made for *Groups*, Baka!',
-  privateonly: 'This command is only made for *Private Chat*, Baka!',
+  botowner: 'Only my *Owner* can use this command, okay!',
+  grouponly: 'This command is only made for *Groups*, okay!',
+  privateonly: 'This command is only made for *Private Chat*, silly!',
   botonly: 'Only the *Bot itself* can use this command!',
   waiting: 'Just Wait...',
-  nolink: 'Please provide me *link*, Baka!',
+  nolink: 'Please provide me *link*, ok!',
   error: 'An error occurd!',
   banned: 'You are *Banned* fron using commands!',
   bangc: 'This Group is *Banned* from using Commands!',
-  nonsfw: 'Dont be a pervert Baka! This is not a NSFW enabled group!'
+  nonsfw: 'Dont be a pervert nerd! This is not a NSFW enabled group!'
 
 }
 
