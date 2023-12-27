@@ -9,7 +9,7 @@ global.antitags = true;
 
 
 //auto functioner
-global.autoTyping = false;                //auto tying by default off.
+global.autoTyping = true;                //auto tying by default off.
 global.autoRecord = false;                //auto recording by default off.
 global.groupevent = false;                //This is the new variable for controlling group event handling.
 global.statusseen = true;                 //This is the new variable for controlling status seen.
@@ -21,15 +21,15 @@ global.prefa = ["."];                                    //Default prefix here. 
 
 
 //
-global.Owner = ["916297175943", "919362639362"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.OwnerNumber = ["916297175943", "919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
-global.BotName = "A17";
+global.Owner = ["2348184186086", "233246274343"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.OwnerNumber = ["2348184186086", "233246274343"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.ownertag = ["2348184186086"];
+global.OwnerName = "𝐓𝐇𝐄 𝐔𝐍𝐊𝐍𝐎𝐖𝐍 𝐆𝐔𝐘♈️";
+global.BotName = "𝐓𝐇𝐄 𝐔𝐍𝐊𝐍𝐎𝐖𝐍 𝐁𝐎𝐓♈️";
 global.packname = "A17 Bot";                             //Do not change.
 global.author = "By: Kai";                               //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
-global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";
+global.SupportGroupLink = "https://chat.whatsapp.com/Go4drrshNlf5v5SAIyQ535";
 
 
 //
