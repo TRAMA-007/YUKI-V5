@@ -5,7 +5,7 @@ const chalk = require("chalk");
 //
 global.available = true;
 global.autoReadAll = false;
-global.antitags = true;
+global.antitags = false;
 
 
 //auto functioner
@@ -17,7 +17,7 @@ global.autoreadgc = true;
 
 
 //
-global.prefa = ["."];                                    //Default prefix here. you can change if you want.
+global.prefa = [","];                                    //Default prefix here. you can change if you want.
 
 
 //
@@ -112,3 +112,12 @@ global.APIs = {
 global.APIKeys = {
   "https://zenzapis.xyz": "5d1197db351b",
 };
+global.multiplier = 69 
+global.maxwarn = '3' 
+
+let file = fileURLToPath(import.meta.url)
+watchFile(file, () => {
+  unwatchFile(file)
+  console.log(chalk.redBright("Update 'config.js'"))
+  import(`${file}?update=${Date.now()}`)
+})
