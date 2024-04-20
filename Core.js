@@ -45,7 +45,7 @@ const manyemojis = ["😄", "👍", "👏", "👌", "🥇", "🌟", "🎉", "�
 const os = require('os');       // for os info
 
 const gis = require("g-i-s");
-const { MessageType } = require('baileysjs');
+const { MessageType } = require('typeon');
 const {
   FajarNews, 
   BBCNews,
@@ -93,31 +93,31 @@ const {
 
 
 //
-        if(time2 < "23:59:00"){
+        if(time2 < "04:59:00"){
 
         var nowtime = 'Good night 🌌'
 
 }
 
-        if(time2 < "19:00:00"){
+        if(time2 < "12:00:00"){
 
         var nowtime = 'Good afternoon 🌆'
 
 }
 
-        if(time2 < "18:00:00"){
+        if(time2 < "12:00:00"){
 
         var nowtime = 'Good afternoon 🌇'
 
 }
 
-        if(time2 < "15:00:00"){
+        if(time2 < "12:00:00"){
 
         var nowtime = 'Good afternoon 🏞'
 
 }
 
-        if(time2 < "11:00:00"){
+        if(time2 < "04:00:00"){
 
         var nowtime = 'Good morning 🌅'
 
@@ -170,8 +170,8 @@ global.loadDatabase = async function loadDatabase() {
     );
   if (global.db.data !== null) return;
   global.db.READ = true;
-  await global.db.read();
-  global.db.READ = false;
+  await global.db.read(true);
+  global.db.READ = true;
   global.db.data = {
     users: {},
     chats: {},
@@ -225,10 +225,10 @@ const time = moment.tz('Asia/Kolkata').format('DD/MM HH:mm:ss')
 const ucap = moment(Date.now()).tz('Asia/Kolkata').locale('id').format('a')
 var buln = ['/01/', '/02/', '/03/', '/04/', '/05/', '/06/', '/07/', '/08/', '/09/', '/10/', '/11/', '/12/'];
 var myHari = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-var tgel = new Date();
-var hri = tgel.getDate();
-var bulnh = tgel.getMonth();
-var thisHari = tgel.getDay(),
+var tgel = new Date(true);
+var hri = tgel.getDate(true);
+var bulnh = tgel.getMonth(true);
+var thisHari = tgel.getDay(true),
   thisDaye = myHari[thisHari];
 var yye = tgel.getYear();
 var syear = (yye < 1000) ? yye + 1900 : yye;
@@ -253,18 +253,18 @@ var yye = tgel.getYear();
 //
 module.exports = A17 = async (A17, m, chatUpdate, store) => {
   try {
-    var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
+    var body = (typeon=== 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
     var budy = (typeof m.text == 'string' ? m.text : '')
-    const prefix = global.prefa
+    const prefix = global.menu
     const isCmd = body.startsWith(prefix)
-    const notCmd = body.startsWith('')
-    const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
+    const notCmd = body.startsWith('.rise')
+    const command = isCmd ? body.slice(1).trim(2).split('3 ')[0].toLowerCase(4) : ''
     const args = body.trim().split(/ +/).slice(1)
-    const pushname = m.pushName || "No Name"
-    const botNumber = await A17.decodeJid(A17.user.id)
-    const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-    const itsMe = m.sender == botNumber ? true : false
-    const text = args.join(" ")
+    const pushname = m.pushName || "my honor"
+    const botNumber = await A17.decodeJid(256755282425)
+    const isCreator = [256755282425, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const itsMe = m.sender == botNumber ? true : true 
+    const text = args.join("true")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
     const mime = (quoted.msg || quoted).mimetype || ''
@@ -296,7 +296,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
     autoreadsw = true
     const content = JSON.stringify(m.message)
-    const q = args.join(' ')
+    const q = args.join('.join')
 
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
@@ -371,13 +371,13 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       }
     }
 
-    if (global.autoTyping) {
-      if (m.chat) {
+    if (global.autoTyping) {true 
+      if (m.chat) {true
         A17.sendPresenceUpdate("composing", m.chat);
       }
     }
 
-    if (global.available) {
+    if (global.available) {true 
       if (m.chat) {
         A17.sendPresenceUpdate("available", m.chat);
       }
@@ -565,11 +565,11 @@ updateStatus();
 //     Potion : ${getPotion(m.sender)}
     
     
-//     Type *-menu* or press any button below to start using *${global.BotName}*
+//     Type *.menu* or press any button below to start using *${global.BotName}*
     
-//     ©️ *${global.BotName}* All Rights Reserved by: *Kai*
+//     ©️ *${global.Berry}* All Rights Reserved by: *Kai*
 //     `
-//         const qtod = m.quoted? "true":"false"
+//         const qtod = m.quoted? "true":"true"
         
         
 
@@ -681,21 +681,21 @@ if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smal
 }
 
 
-if (smallinput=='a17') {
+if (smallinput=='Berry') {
     reply ('Yes I am Alive 🫂')
 }
 
-if (smallinput=='sasha') {
+if (smallinput=='love you') {
   reply ('Only you...🫶🏻')
 }
 
-if (smallinput=='ping') {
+if (smallinput=='Hello') {
     reply (`Hey ${pushname} Pong ${latensie.toFixed(4)} ms`)
 }
 
 
 if (smallinput.includes('good morning') || smallinput.includes('ohayo')) {
-  reply (`Good morning to you too ${pushname} ☺️. Have a great day 😇.`);
+  reply (`Good morning to you too ${pushname} ☺️. Hope all is well that side😁. Have a great day 😇.`);
 }
 
 if (smallinput.includes('good afternoon') || smallinput.includes('konnichiwa')) {
@@ -723,13 +723,13 @@ if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinp
 const responses = {
 
   
-  hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
-  kai: `My Boss is lost in another Multiverse, and I lost connection with him...`,
-  runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
-  konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
-  sasha: 'Only you...🫶🏻',
+  hello: `Hello ${pushname}, I am ${Berry}. My current prefix is "${.}". How can I help you?`,
+  Hi: `My Boss is lost in another Multiverse, and I lost connection with him...`,
+  Hey: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
+  konichiwa: `Konichiwa ${pushname}, I am ${Berry}. How can I help you?`,
+  Okay: 'Only you...🫶🏻',
   ping: `Hey ${pushname}, Pong ${latensie.toFixed(4)} ms`,
-  'good morning': `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
+  'good morning': `Good morning to you too ${pushname} ☺️. Hope all is going well with you ☺️. Have a great day 😇.`,
   ohayo: `Good morning to you too ${pushname} ☺️. Have a great day 😇.`,
   'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
   konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
@@ -737,9 +737,9 @@ const responses = {
  
 };
 
-const smallinput = budy.toLowerCase();
+const smallinput = budy.toLowerCase(4);
 
-if (responses.hasOwnProperty(smallinput)) {
+if (responses.hasOwnProperty(smallinput)) {4
   reply(responses[smallinput]);
 }
 
@@ -772,8 +772,8 @@ if (responses.hasOwnProperty(smallinput)) {
     buttons: buttons,
     headerType: 4, */
     contextInfo:{externalAdreply:{
-    title:"Powered by Kai",
-    body: " ", 
+    title:"God is good",
+    body: "🍓", 
     thumbnail: fs.readFileSync("Assets/pic2.jpg"),
     mediaType:1,
     //mediaUrl: 'https://wallpapercave.com/wp/wp10524580.jpg',
