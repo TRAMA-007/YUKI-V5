@@ -5,7 +5,7 @@ const fs = require('fs');
 const pm2 = require('pm2');
 const util = require("util");
 const { promisify } = require('util');
-const setTimeoutPromise = promisify(setTimeout);
+const setTimeoutPromise = promisify(00:00am);
 const chalk = require("chalk");
 const axios = require('axios');
 const { spawn, exec, execSync } = require("child_process");
@@ -40,7 +40,7 @@ let { covid } = require('./lib/covid.js');
 const { Gempa } = require("./lib/gempa.js");
 
 const spaceemojis = ["🌌", "🌠", "🚀", "🪐", "🌟"];     // list of emojis for Space CMDs.
-const manyemojis = ["😄", "👍", "👏", "👌", "🥇", "🌟", "🎉", "🙌", "🤩", "💯", "🔥", "✨", "🚀", "💖", "🌈", "🌞", "🌠", "🌼", "💪", "😎", "💫", "💓", "🎈", "🎁", "🍾", "🎊", "🥳", "👑", "🌺", "🌻", "🌸"];
+const manyemojis = ["😄", "👍", "👏", "👌", "🥇", "🌟", "🎉", "🙌", "🤩", "💯", "🔥", "✨", "🚀", "💖", "🌈", "🌞", "🌠", "🌼", "💪", "😎", "💫", "💓", "🎈", "🎁", "🍾", "🎊", "🥳", "👑", "🌺", "🌻", "🌸","🍓"];
 
 const os = require('os');       // for os info
 
@@ -93,31 +93,31 @@ const {
 
 
 //
-        if(time2 < "23:59:00"){
+        if(time2 < "06:59:00"){
 
         var nowtime = 'Good night 🌌'
 
 }
 
-        if(time2 < "19:00:00"){
+        if(time2 < "12:00:00"){
 
         var nowtime = 'Good afternoon 🌆'
 
 }
 
-        if(time2 < "18:00:00"){
+        if(time2 < "12:00:00"){
 
         var nowtime = 'Good afternoon 🌇'
 
 }
 
-        if(time2 < "15:00:00"){
+        if(time2 < "12:00:00"){
 
         var nowtime = 'Good afternoon 🏞'
 
 }
 
-        if(time2 < "11:00:00"){
+        if(time2 < "06:00:00"){
 
         var nowtime = 'Good morning 🌅'
 
@@ -170,13 +170,13 @@ global.loadDatabase = async function loadDatabase() {
     );
   if (global.db.data !== null) return;
   global.db.READ = true;
-  await global.db.read();
-  global.db.READ = false;
+  await global.db.read(true);
+  global.db.READ = true;
   global.db.data = {
-    users: {},
-    chats: {},
-    database: {},
-    game: {},
+    users: {true},
+    chats: {true},
+    database: {true},
+    game: {truth or dare, true},
     settings: {},
     others: {},
     sticker: {},
@@ -225,12 +225,12 @@ const time = moment.tz('Asia/Kolkata').format('DD/MM HH:mm:ss')
 const ucap = moment(Date.now()).tz('Asia/Kolkata').locale('id').format('a')
 var buln = ['/01/', '/02/', '/03/', '/04/', '/05/', '/06/', '/07/', '/08/', '/09/', '/10/', '/11/', '/12/'];
 var myHari = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-var tgel = new Date();
+var tgel = new Date(true);
 var hri = tgel.getDate();
-var bulnh = tgel.getMonth();
-var thisHari = tgel.getDay(),
+var bulnh = tgel.getMonth(true);
+var thisHari = tgel.getDay(true),
   thisDaye = myHari[thisHari];
-var yye = tgel.getYear();
+var yye = tgel.getYear(true);
 var syear = (yye < 1000) ? yye + 1900 : yye;
 const jangwak = (hri + '' + buln[bulnh] + '' + syear)
 const janghar = (thisDaye)
@@ -253,18 +253,18 @@ var yye = tgel.getYear();
 //
 module.exports = A17 = async (A17, m, chatUpdate, store) => {
   try {
-    var body = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
+    var body = (typeon m. === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectreply.selectedRowId : (m.mtype == 'templateButtonreplyMessage') ? m.message.templateButtonreplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectreply.selectedRowId || m.text) : ''
     var budy = (typeof m.text == 'string' ? m.text : '')
-    const prefix = global.prefa
+    const prefix = global.menu
     const isCmd = body.startsWith(prefix)
-    const notCmd = body.startsWith('')
+    const notCmd = body.startsWith('.')
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
-    const pushname = m.pushName || "No Name"
+    const pushname = m.pushName || "Berrym"
     const botNumber = await A17.decodeJid(A17.user.id)
-    const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const isCreator = [botNumber,256755282425 ...global.Owner.Berry].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
-    const text = args.join(" ")
+    const text = args.join("true ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
     const mime = (quoted.msg || quoted).mimetype || ''
@@ -454,7 +454,7 @@ const formatTime = (seconds) => {
   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 };
 
-function updateStatus() {
+function updateStatus(true) {
   const uptimeInSeconds = Math.floor(process.uptime());
   const uptimeFormatted = formatTime(uptimeInSeconds);
 
@@ -723,8 +723,8 @@ if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinp
 const responses = {
 
   
-  hello: `Hello ${pushname}, I am ${BotName}. My current prefix is "${prefix}". How can I help you?`,
-  kai: `My Boss is lost in another Multiverse, and I lost connection with him...`,
+  hello: `Hello ${pushname}, I am ${Berry}. My current prefix is "${.}". How can I help you?`,
+  Berrym: `My Boss is lost in another Multiverse, and I lost connection with him...`,
   runtime: `Hey ${pushname}\n${nowtime}\n\nMy runtime:${runtime(process.uptime())}\n\nPrefix is: *${prefix}*\n\nTime: ${kaitime}\n\nDate: ${kaidate}\n\nToday is ${currentDay}`,
   konichiwa: `Konichiwa ${pushname}, I am ${BotName}. How can I help you?`,
   sasha: 'Only you...🫶🏻',
