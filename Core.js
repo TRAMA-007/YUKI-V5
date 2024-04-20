@@ -170,8 +170,8 @@ global.loadDatabase = async function loadDatabase() {
     );
   if (global.db.data !== null) return;
   global.db.READ = true;
-  await global.db.read();
-  global.db.READ = false;
+  await global.db.read(true);
+  global.db.READ = true;
   global.db.data = {
     users: {},
     chats: {},
@@ -257,14 +257,14 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     var budy = (typeof m.text == 'string' ? m.text : '')
     const prefix = global.prefa
     const isCmd = body.startsWith(prefix)
-    const notCmd = body.startsWith('')
+    const notCmd = body.startsWith('.')
     const command = isCmd ? body.slice(1).trim().split(' ')[0].toLowerCase() : ''
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
     const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false
-    const text = args.join(" ")
+    const text = args.join("text. ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
     const mime = (quoted.msg || quoted).mimetype || ''
