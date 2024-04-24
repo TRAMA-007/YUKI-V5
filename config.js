@@ -21,15 +21,15 @@ global.prefa = ["."];                                    //Default prefix here. 
 
 
 //
-global.Owner = ["916297175943", "919362639362"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.OwnerNumber = ["916297175943", "919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
-global.BotName = "A17";
-global.packname = "A17 Bot";                             //Do not change.
-global.author = "By: Kai";                               //Do not change.
+global.Owner = ["2349025390652", "2349025390652"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.OwnerNumber = ["2349025390652", "2349025390652"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.ownertag = ["2349025390652"];
+global.OwnerName = "AduraJohn";
+global.BotName = "AduraJohnBot";
+global.packname = "AduraJohnBot";                             //Do not change.
+global.author = "By: AduraJohn";                               //Do not change.
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
-global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";
+global.SupportGroupLink = "https://chat.whatsapp.com/KqW6vFVBx2j6yLaWZHhWoU";
 
 
 //
@@ -41,7 +41,7 @@ global.openAiAPI = "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";
 
 
 //
-global.location = "Tata City, India";
+global.location = "Ibadan City, Nigeria";
 global.reactmoji = "❤️";
 global.themeemoji = "💖";
 global.vidmenu = { url: 'https://media.tenor.com/Jdu0Ov8X2sIAAAAC/A17-Bot.mp4' };
@@ -80,7 +80,7 @@ global.ntilink = []
 //
 global.mess = {
   jobdone: 'Here you go...',
-  useradmin: 'Sorry, only *Group Admins* can use this command *Baka*!',
+  useradmin: 'Sorry, only *Group Admins* can use this command',
   botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
   botowner: 'Only my *Owner* can use this command, Baka!',
   grouponly: 'This command is only made for *Groups*, Baka!',
