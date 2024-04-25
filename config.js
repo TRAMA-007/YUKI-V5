@@ -17,14 +17,14 @@ global.autoreadgc = true;
 
 
 //
-global.prefa = ["."];                                    //Default prefix here. you can change if you want.
+global.prefa = ["#"];                                    //Default prefix here. you can change if you want.
 
 
 //
-global.Owner = ["916297175943", "919362639362"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.OwnerNumber = ["916297175943", "919362639362"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
-global.ownertag = ["916297175943"];
-global.OwnerName = "Kai";
+global.Owner = ["2348032309782"];         //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.OwnerNumber = ["2348032309782"];   //If you want singal number so global.Owner = ['916297175943'] Change into your number.
+global.ownertag = ["2348032309782"];
+global.OwnerName = "𝙂𝙀𝙉𝙏𝙇𝙀";
 global.BotName = "A17";
 global.packname = "A17 Bot";                             //Do not change.
 global.author = "By: Kai";                               //Do not change.
@@ -80,17 +80,17 @@ global.ntilink = []
 //
 global.mess = {
   jobdone: 'Here you go...',
-  useradmin: 'Sorry, only *Group Admins* can use this command *Baka*!',
+  useradmin: 'Sorry, only *Group Admins* can use this command *ODE*!',
   botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
-  botowner: 'Only my *Owner* can use this command, Baka!',
-  grouponly: 'This command is only made for *Groups*, Baka!',
+  botowner: 'Only my *Owner* can use this command, WEREY!',
+  grouponly: 'This command is only made for *Groups*, 🗿!',
   privateonly: 'This command is only made for *Private Chat*, Baka!',
   botonly: 'Only the *Bot itself* can use this command!',
   waiting: 'Just Wait...',
   nolink: 'Please provide me *link*, Baka!',
   error: 'An error occurd!',
-  banned: 'You are *Banned* fron using commands!',
-  bangc: 'This Group is *Banned* from using Commands!',
+  banned: 'You are *Banned* fron using commands ODE!',
+  bangc: 'This Group is *Banned* from using Commands BUNCH OF WEREYS!',
   nonsfw: 'Dont be a pervert Baka! This is not a NSFW enabled group!'
 
 }
