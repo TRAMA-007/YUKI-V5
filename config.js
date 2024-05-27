@@ -16,11 +16,11 @@ global.autoreadgc = process.env.AUTOREADGC || true;
 
 
 // Auth information
-global.pairNumber = "919002162806";                         // Add your paining number with country code example "916297175943"; 
+global.pairNumber = "254797697725";                         // Add your paining number with country code example "916297175943"; 
 global.port = process.env.PORT || "10000";
-global.auth = process.env.AUTH || "Pairing";                // Auth mode OR/Pairing.
+global.auth = process.env.AUTH || "27_05_2024_SIGMA_MD_uMfQEtir_MAHER_ZUBAIR";                // Auth mode OR/Pairing.
 global.sessionFile = process.env.SESSION_FILE || "A17-SESSION";
-global.mongodb = process.env.MONGODB || "";                 // Mongodb url.
+global.mongodb = process.env.MONGODB || "mongodb+srv://MU496700:MU496700@cluster0.gngv8up.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";                 // Mongodb url.
 global.website = "https://www.exenoz.tech"; 
 global.github = "https://github.com/Kai0071";
 
@@ -30,9 +30,9 @@ global.prefa = process.env.PREFIX ? process.env.PREFIX.split(",") : ["."];
 
 
 // Owner information
-global.Owner = process.env.OWNER ? process.env.OWNER.split(",") : ["916297175943", "919362639362"];
-global.OwnerNumber = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(",") : ["916297175943", "919362639362"];
-global.ownertag = process.env.OWNER_TAG ? process.env.OWNER_TAG.split(",") : ["916297175943"];
+global.Owner = process.env.OWNER ? process.env.OWNER.split(",") : ["254797697725", "254797697725"];
+global.OwnerNumber = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(",") : ["254797697725", "254797697725"];
+global.ownertag = process.env.OWNER_TAG ? process.env.OWNER_TAG.split(",") : ["254797697725"];
 global.OwnerName = process.env.OWNER_NAME || "Kai";
 global.BotName = process.env.BOT_NAME || "A17";
 global.packname = process.env.PACK_NAME || "A17 Bot";
