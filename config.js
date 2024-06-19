@@ -31,7 +31,7 @@ global.prefa = process.env.PREFIX ? process.env.PREFIX.split(",") : ["."];
 
 // Owner information
 global.Owner = process.env.OWNER ? process.env.OWNER.split(",") : ["916297175943", "919362639362"];
-global.OwnerNumber = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(",") : ["916297175943", "919362639362"];
+global.OwnerNumber = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(",") : ["237658771292", "237658771292"];
 global.ownertag = process.env.OWNER_TAG ? process.env.OWNER_TAG.split(",") : ["916297175943"];
 global.OwnerName = process.env.OWNER_NAME || "Kai";
 global.BotName = process.env.BOT_NAME || "A17";
