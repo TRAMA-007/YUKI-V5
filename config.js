@@ -17,7 +17,7 @@ global.autoreadgc = process.env.AUTOREADGC || true;
 
 // Auth information
 global.pairNumber = "249992134574";                         // Add your paining number with country code example "916297175943"; 
-global.port = process.env.PORT || "3000";
+global.port = process.env.PORT || "10000";
 global.auth = process.env.AUTH || "Pairing";                // Auth mode OR/Pairing.
 global.sessionFile = process.env.SESSION_FILE || "A17-SESSION";
 global.mongodb = process.env.MONGODB || "mongodb+srv://trama1:trama1@cluster0.0axhygx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";                 // Mongodb url.
