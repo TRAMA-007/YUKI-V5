@@ -713,7 +713,11 @@ Typed *surrender* to surrender and admited defeat`
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
-
+      'يوكي':'عيوني',
+      'عيوني' : 'يوكي',
+      'بوت' : 'عندي أسم لو سمحت',
+      'عندي اسم لو سمحت' : 'بوت' ,
+      'يوكينا' : 'يوكنيشتا' ,
     };
 
     const smallinput = budy.toLowerCase();
@@ -721,7 +725,22 @@ Typed *surrender* to surrender and admited defeat`
     if (responses.hasOwnProperty(smallinput)) {
       reply(responses[smallinput]);
     }
+function autoReply(inputText) {
+    const specificWord = 'هلا'; // Specify the specific word here
+    const replies = [
+        'أهلين يا قلب',
+        'هلوات',
+        'هلا وغلا',
+        'هاي'
+    ];
 
+    if (inputText.toLowerCase().includes(specificWord)) {
+        const randomReply = replies[Math.floor(Math.random() * replies.length)];
+        return randomReply;
+    } else {
+        return 'No specific word mentioned.';
+    }
+}
 
     //============= [LIST RESPONCE CHECKING START ]================
 
