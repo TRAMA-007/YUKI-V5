@@ -632,7 +632,7 @@ Typed *surrender* to surrender and admited defeat`
       return arr[Math.floor(Math.random() * arr.length)]
     }
 
-    /
+  
   let smallinput = budy.toLowerCase()
   if (smallinput.includes('يوكينا')) {
     reply (`اسمي ${BotName} عايز حاجة ممكن اساعدك فيها؟`);
