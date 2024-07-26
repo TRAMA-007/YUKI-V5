@@ -748,13 +748,13 @@ function autoReply(inputText) {
 }
 
 
-  if (smallinput.includes('تست') {
-  const media = await getBuffer("https://graph.org/file/cc56ffb64f548ad3e6833.png");
+    if (smallinput.includes('تست')) {
+    const media = await getBuffer("https://graph.org/file/cc56ffb64f548ad3e6833.png");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);	    
    }
 
-  if (smallinput.includes('2تست') {
+  if (smallinput.includes('2تست')) {
   const media = await getBuffer("https://graph.org/file/2acd49823aee200d9913d.jpg");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);	    
