@@ -784,16 +784,6 @@ function autoReply(inputText) {
  'https://graph.org/file/9d93b8c642147c0e0fda1.png',
     ];
 
-    // اختيار رابط عشوائي
-    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-        let media = await getBuffer(randomImageUrl);
-        const webpBuffer = await sharp(media)
-         .webp() 
-         .toBuffer();
-       // Send sticker usng A17 libray (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
-   }
-	   }
 
 
   
