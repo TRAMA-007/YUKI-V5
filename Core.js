@@ -774,19 +774,7 @@ function autoReply(inputText) {
     author: 'Me', // The author name
     })
 
-        // قائمة بروابط الصور المختلفة
-   const imageUrls = [
- 'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
- 'https://graph.org/file/8cb96154ceca2e3a7c559.png',
- 'https://graph.org/file/86c444642b5768dc7d2d5.png',
- 'https://graph.org/file/67186665580c88684c847.png',
- 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
- 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
-    ];
 
-
-
-  
     //============= [LIST RESPONCE CHECKING START ]================
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
@@ -6775,7 +6763,7 @@ _Click the button below to download_`
    ⌯  Runtime : ${runtime(process.uptime())} 
    ⌯  RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
    ⌯  Total CPU Usage: ${totalCpuUsage}%
-   ⌯  Platform : Linux
+   ⌯  Platform : واق الواق
           
           
             〢━ 〄 Core 〄 ━〢
