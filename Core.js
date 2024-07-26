@@ -515,8 +515,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //   }
 
 
-    //     const menulist = `
-    //     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Kai to take your WhatsApp usage into next level.
+         const menulist = `
+    //     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Tramazool to take your WhatsApp usage into next level.
 
     //        「 System Info 」
 
@@ -632,20 +632,20 @@ Typed *surrender* to surrender and admited defeat`
       return arr[Math.floor(Math.random() * arr.length)]
     }
 
-    /*
+    /
   let smallinput = budy.toLowerCase()
-  if (smallinput.includes('hello')) {
-    reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+  if (smallinput.includes('يوكينا')) {
+    reply (`اسمي ${BotName} عايز حاجة ممكن اساعدك فيها؟`);
   } 
   
-  //if (smallinput.includes('hi')) {
+  if (smallinput.includes('hi')) {
   
-  //   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+     reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
   
-  // } 
+  } 
   
-  if (smallinput=='kai') {
-      reply (`My Boss is lost in another Multiverse, and I lost the connection with him...`)
+  if (smallinput=='تراما') {
+      reply (`المطور حالياً ضايع في بحر المواجع و مش عارف امتى راجع`)
   }
   
   
@@ -713,17 +713,15 @@ Typed *surrender* to surrender and admited defeat`
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
-      'يوكي':'عيوني',
-      'عيوني' : 'يوكي',
-      'بوت' : 'عندي أسم لو سمحت',
-      'عندي اسم لو سمحت' : 'بوت' ,
-      'يوكينا' : 'يوكنيشتا' ,
+      'بوت' : 'اسمي يوكي ياخ > <',
+      'يوكينا' : 'عيوني',
+      'بوتة' : 'بوتة في عينك اسمي يوكي',
     };
 
-    const smallinput = budy.toLowerCase();
+    const smallinputs = budy.toLowerCase();
 
-    if (responses.hasOwnProperty(smallinput)) {
-      reply(responses[smallinput]);
+    if (responses.hasOwnProperty(smallinputs)) {
+      reply(responses[smallinputs]);
     }
 function autoReply(inputText) {
     const specificWord = 'هلا'; // Specify the specific word here
@@ -737,8 +735,6 @@ function autoReply(inputText) {
     if (inputText.toLowerCase().includes(specificWord)) {
         const randomReply = replies[Math.floor(Math.random() * replies.length)];
         return randomReply;
-    } else {
-        return 'No specific word mentioned.';
     }
 }
 
@@ -792,7 +788,7 @@ function autoReply(inputText) {
            headerType: 4, */
           contextInfo: {
             externalAdreply: {
-              title: "Powered by Kai",
+              title: "Powered by Yuki",
               body: " ",
               thumbnail: fs.readFileSync("Assets/pic2.jpg"),
               mediaType: 1,
