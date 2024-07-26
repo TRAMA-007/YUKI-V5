@@ -733,7 +733,7 @@ Typed *surrender* to surrender and admited defeat`
       reply(responses[smallinputs]);
     }
 function autoReply(inputText) {
-    const specificWord = 'يو'; // Specify the specific word here
+    const specificWord = 'هلا'; // Specify the specific word here
     const replies = [
         'أهلين يا قلب',
         'هلوات',
@@ -746,34 +746,6 @@ function autoReply(inputText) {
         return randomReply;
     }
 }
-
-
-    if (smallinput.includes('تست')) {
-    const media = await getBuffer("https://graph.org/file/cc56ffb64f548ad3e6833.png");
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);	    
-   }
-
-  if (smallinput.includes('2تست')) {
-  const media = await getBuffer("https://graph.org/file/2acd49823aee200d9913d.jpg");
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);	    
-   }
-
-    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
-  const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);	    
-   }
-
-     if (smallinput.includes('jj')) {
-	 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
-	 let media = await getBuffer("https://graph.org/file/83d142ce507097d13351f.png");
-	    const sticker = new Sticker(media, {
-    pack: 'My Pack', // The pack name
-    author: 'Me', // The author name
-    })
-
 
     //============= [LIST RESPONCE CHECKING START ]================
 
@@ -6763,7 +6735,7 @@ _Click the button below to download_`
    ⌯  Runtime : ${runtime(process.uptime())} 
    ⌯  RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
    ⌯  Total CPU Usage: ${totalCpuUsage}%
-   ⌯  Platform : واق الواق
+   ⌯  Platform : Linux
           
           
             〢━ 〄 Core 〄 ━〢
