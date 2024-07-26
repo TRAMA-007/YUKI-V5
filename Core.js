@@ -515,7 +515,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //   }
 
 
-         const menulist = `
+    //   const menulist = `
     //     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Tramazool to take your WhatsApp usage into next level.
 
     //        「 System Info 」
@@ -626,7 +626,7 @@ Typed *surrender* to surrender and admited defeat`
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
 
-
+    /*
     //
     const pickRandom = (arr) => {
       return arr[Math.floor(Math.random() * arr.length)]
@@ -697,7 +697,17 @@ Typed *surrender* to surrender and admited defeat`
     reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
   }
 
+  */
 
+   let smallinput = budy.toLowerCase()
+    if (smallinput.includes('يوكيينا')) {
+    reply (`اسمي ${BotName} عايز حاجة ممكن اساعدك فيها؟`);
+  } 
+
+     if (smallinput.includes('يوكيي')) {
+    reply (`عيونييييي`);
+  } 
+    
     const responses = {
 
 
