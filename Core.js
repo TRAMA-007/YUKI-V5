@@ -733,7 +733,7 @@ Typed *surrender* to surrender and admited defeat`
       reply(responses[smallinputs]);
     }
 function autoReply(inputText) {
-    const specificWord = 'هلا'; // Specify the specific word here
+    const specificWord = 'يو'; // Specify the specific word here
     const replies = [
         'أهلين يا قلب',
         'هلوات',
@@ -746,6 +746,19 @@ function autoReply(inputText) {
         return randomReply;
     }
 }
+
+
+  if (smallinput.includes('تست') {
+  const media = await getBuffer("https://graph.org/file/cc56ffb64f548ad3e6833.png");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);	    
+   }
+
+  if (smallinput.includes('2تست') {
+  const media = await getBuffer("https://graph.org/file/2acd49823aee200d9913d.jpg");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);	    
+   }
 
     //============= [LIST RESPONCE CHECKING START ]================
 
