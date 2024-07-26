@@ -760,6 +760,43 @@ function autoReply(inputText) {
           await fs.unlinkSync(encmedia);	    
    }
 
+    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
+  const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);	    
+   }
+
+     if (smallinput.includes('jj')) {
+	 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
+	 let media = await getBuffer("https://graph.org/file/83d142ce507097d13351f.png");
+	    const sticker = new Sticker(media, {
+    pack: 'My Pack', // The pack name
+    author: 'Me', // The author name
+    })
+
+        // قائمة بروابط الصور المختلفة
+   const imageUrls = [
+ 'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
+ 'https://graph.org/file/8cb96154ceca2e3a7c559.png',
+ 'https://graph.org/file/86c444642b5768dc7d2d5.png',
+ 'https://graph.org/file/67186665580c88684c847.png',
+ 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
+ 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
+    ];
+
+    // اختيار رابط عشوائي
+    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
+        const webpBuffer = await sharp(media)
+         .webp() 
+         .toBuffer();
+       // Send sticker usng A17 libray (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
+   }
+	   }
+
+
+  
     //============= [LIST RESPONCE CHECKING START ]================
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
