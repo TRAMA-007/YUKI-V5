@@ -778,7 +778,7 @@ if (smallinput.includes('مست')) {
    reply(random)
   }
 
-(smallinput.includes('شوفونا')) {
+ if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);	    
