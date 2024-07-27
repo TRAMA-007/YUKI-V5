@@ -766,8 +766,33 @@ function autoReply(inputText) {
 }
 
 
+ if (smallinput.includes('منت')) {
+   const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+  }
+if (smallinput.includes('مست')) {
+   const typ = ['كبلنيبمليليبليل', 'وانا سءسءسيشيش', 'دددددددددو🍆 🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+  }
+
+(smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
+  const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);	    
+   }
 
 
+   if (smallinput.includes('lop')) {
+   const { Image } = require ("react-native-compressor");
+  const result = await Image.compress('https://graph.org/file/605e27cf2c16a9f2dc432.png', {
+  compressionMethod: 'manual',
+  maxWidth: 1000,
+  quality: 0.8,
+}); 
+    A17.sendMessage(from, { image : result }, { quoted: m });
+       }
     //============= [LIST RESPONCE CHECKING START ]================
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
