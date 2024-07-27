@@ -8,9 +8,6 @@ const { promisify } = require('util');
 const setTimeoutPromise = promisify(setTimeout);
 const chalk = require("chalk");
 const axios = require('axios');
-const sharp = require('sharp');
-const sagiri = require("sagiri");
-const ecoo = require('discord-economy-super')
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -27,10 +24,8 @@ const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate)
 
 const speed = require('performance-now');
 const eco = require('discord-mongoose-economy');
-// const thiccysapi = require('textmaker-thiccy');
 // const ffmpeg = require('fluent-ffmpeg');
-// const ffmpegPath = require('@ffmpeg-static/ffmpeg');
-//  const ffmpegPath = require('ffmpeg-static').path;
+// const ffmpegPath = require('ffmpeg-static').path;
 // ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
 const modapk = require("tod-api");
@@ -41,28 +36,25 @@ const { isLimit, limitAdd, getLimit, giveLimit, kurangBalance, getBalance, isGam
 const githubstalk = require('./lib/githubstalk');
 let { covid } = require('./lib/covid.js');
 const { Gempa } = require("./lib/gempa.js");
-//-------- TEST START
-const {
-	downloadContentFromMessage,
-    BufferJSON,
-    WA_DEFAULT_EPHEMERAL,
-    generateWAMessageFromContent,
-    proto,
-    generateWAMessageContent,
-    generateWAMessage,
-    prepareWAMessageMedia,
-    areJidsSameUser,
-    getContentType
-} = require('@whiskeysockets/baileys')
-//-------- END OF TEST
+const getLyrics = require("@fantox01/lyrics-scraper");
 const spaceemojis = ["🌌", "🌠", "🚀", "🪐", "🌟"];     // list of emojis for Space CMDs.
 const manyemojis = ["😄", "👍", "👏", "👌", "🥇", "🌟", "🎉", "🙌", "🤩", "💯", "🔥", "✨", "🚀", "💖", "🌈", "🌞", "🌠", "🌼", "💪", "😎", "💫", "💓", "🎈", "🎁", "🍾", "🎊", "🥳", "👑", "🌺", "🌻", "🌸"];
-const os = require('os');       // for os info
-
+const os = require("node:os");       // for os info
 const gis = require("g-i-s");
-const { MessageType } = require('@whiskeysockets/baileys');
-//"parse-ms": "^1.1.0",
 
+const { downloadContentFromMessage,
+  WA_DEFAULT_EPHEMERAL,
+  proto, jid,
+  getContentType,
+  generateWAMessageContent,
+  generateWAMessageFromContent,
+  BufferJSON,
+  prepareWAMessageMedia,
+  MessageType,
+  areJidsSameUser, } = require('@whiskeysockets/baileys');
+
+
+//"parse-ms": "^1.1.0",
 
 //
 let nowtime = '';
@@ -84,9 +76,13 @@ if (time2 < "05:00:00") {
 
 
 
-// hhhjkjgkkhghjhkك
+// 
 const timestampe = speed();
 const latensie = speed() - timestampe
+const used = process.memoryUsage();
+const cpu = os.cpus()[0];
+const totalCpuUsage = (100 * (cpu.times.user + cpu.times.nice + cpu.times.sys + cpu.times.irq) / cpu.times.idle).toFixed(2);
+const systemName = os.platform() + ' ' + os.release();
 
 var low;
 try {
@@ -108,7 +104,7 @@ global.db = new Low(
       ? new mongoDB(opts["db"])
       : new JSONFile(`src/database.json`)
 );
-global.DATABASE = global.db; // Backwardds Compatibility
+global.DATABASE = global.db; // Backwards Compatibility
 global.loadDatabase = async function loadDatabase() {
   if (global.db.READ)
     return new Promise((resolve) =>
@@ -150,9 +146,8 @@ if (global.db)
   };
 
 
-
-//ghgjjk
-let isSleeping = false; // Move tthe declaraation herge.
+//
+let isSleeping = false; // Move the declaration here.
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
 let kaiaudio = JSON.parse(fs.readFileSync('./Media-Database/audio.json'));
@@ -215,10 +210,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
-    const isCreator = [...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-   
-    const itsMe = m.sender == botNumber ? true : false 
-    const tagg = (m.mentionedJid.includes(botNumber) || (m.quoted && m.quoted.sender === botNumber)) ? botNumber : null;
+    const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+    const itsMe = m.sender == botNumber ? true : false
     const text = args.join(" ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
@@ -250,9 +243,9 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
     const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
     autoreadsw = true
-    const AntiBadWord = m.isGroup ? ntword.includes(from) : false
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
+    // const button = m.body
 
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
@@ -268,7 +261,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     /* const reply = (teks) => {
-      A17.sendMessage(m.chat, { text: tekkkkks }, { quoted: m }); 
+      A17.sendMessage(m.chat, { text: teks }, { quoted: m }); 
     }; */
 
 
@@ -742,50 +735,33 @@ Typed *surrender* to surrender and admited defeat`
       'بوت' : 'اسمي يوكي ياخ > <',
       'يوكينا' : 'عيوني',
       'بوتة' : 'بوتة في عينك اسمي يوكي',
-	   'هجهج' : 'هجهج ستار ملك الأفكار', 
+      'هجهج' : 'هجهج ستار ملك الأفكار',
+      'سلام عليكم' : 'و عليكم السلام', 
     };
 
     const smallinputs = budy.toLowerCase();
-
-    if (responses.hasOwnProperty(smallinputs)) {
-      reply(responses[smallinputs]);
-    }
     
-function autoReply(inputText) {
-    const specificWord = 'هلا'; // Specify the specific word here
-    const replies = [
-        'أهلين يا قلب',
-        'هلوات',
-        'هلا وغلا',
-        'هاي'
-    ];
 
-    if (inputText.toLowerCase().includes(specificWord)) {
-        const randomReply = replies[Math.floor(Math.random() * replies.length)];
-        return randomReply;
-    }
-}
+    if (smallinput.includes('منت')) {
+   const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+  }
+    if (smallinput.includes('مست')) {
+   const typ = ['كبلنيبمليليبليل', 'وانا سءسءسيشيش', 'دددددددددو🍆 🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+  }
 
+    if (smallinput.includes('يوكي')) {
+    reply (`نعم.`);
+  }
 
- 
-
- if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
-  const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
-          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
-          await fs.unlinkSync(encmedia);	    
-   }
-  
+  if (smallinput.includes('حضن')) {
+    reply ('يحضنك كلب');
+  }
 
 
-   if (smallinput.includes('lop')) {
-   const { Image } = require ("react-native-compressor");
-  const result = await Image.compress('https://graph.org/file/605e27cf2c16a9f2dc432.png', {
-  compressionMethod: 'manual',
-  maxWidth: 1000,
-  quality: 0.8,
-}); 
-    A17.sendMessage(from, { image : result }, { quoted: m });
-       }
     //============= [LIST RESPONCE CHECKING START ]================
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
