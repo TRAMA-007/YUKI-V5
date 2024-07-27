@@ -770,7 +770,7 @@ function getRandomReply() {
 }
 
 // Function to check for specified word and return a random reply
-function checkAndReply(message, specifiedWord) {
+function checkAndReply(message, 'وه') {
   if (message.includes('وه')) {
     return getRandomReply();
       }
