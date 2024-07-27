@@ -8,6 +8,9 @@ const { promisify } = require('util');
 const setTimeoutPromise = promisify(setTimeout);
 const chalk = require("chalk");
 const axios = require('axios');
+const sharp = require('sharp');
+const sagiri = require("sagiri");
+const ecoo = require('discord-economy-super')
 const { spawn, exec, execSync } = require("child_process");
 const moment = require("moment-timezone");
 const { EmojiAPI } = require("emoji-api");
@@ -24,8 +27,10 @@ const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate)
 
 const speed = require('performance-now');
 const eco = require('discord-mongoose-economy');
+// const thiccysapi = require('textmaker-thiccy');
 // const ffmpeg = require('fluent-ffmpeg');
-// const ffmpegPath = require('ffmpeg-static').path;
+// const ffmpegPath = require('@ffmpeg-static/ffmpeg');
+//  const ffmpegPath = require('ffmpeg-static').path;
 // ffmpeg.setFfmpegPath(ffmpegPath);
 const Jimp = require('jimp');  // for full dp etc.
 const modapk = require("tod-api");
@@ -36,25 +41,28 @@ const { isLimit, limitAdd, getLimit, giveLimit, kurangBalance, getBalance, isGam
 const githubstalk = require('./lib/githubstalk');
 let { covid } = require('./lib/covid.js');
 const { Gempa } = require("./lib/gempa.js");
-const getLyrics = require("@fantox01/lyrics-scraper");
+//-------- TEST START
+const {
+	downloadContentFromMessage,
+    BufferJSON,
+    WA_DEFAULT_EPHEMERAL,
+    generateWAMessageFromContent,
+    proto,
+    generateWAMessageContent,
+    generateWAMessage,
+    prepareWAMessageMedia,
+    areJidsSameUser,
+    getContentType
+} = require('@whiskeysockets/baileys')
+//-------- END OF TEST
 const spaceemojis = ["🌌", "🌠", "🚀", "🪐", "🌟"];     // list of emojis for Space CMDs.
 const manyemojis = ["😄", "👍", "👏", "👌", "🥇", "🌟", "🎉", "🙌", "🤩", "💯", "🔥", "✨", "🚀", "💖", "🌈", "🌞", "🌠", "🌼", "💪", "😎", "💫", "💓", "🎈", "🎁", "🍾", "🎊", "🥳", "👑", "🌺", "🌻", "🌸"];
-const os = require("node:os");       // for os info
+const os = require('os');       // for os info
+
 const gis = require("g-i-s");
-
-const { downloadContentFromMessage,
-  WA_DEFAULT_EPHEMERAL,
-  proto, jid,
-  getContentType,
-  generateWAMessageContent,
-  generateWAMessageFromContent,
-  BufferJSON,
-  prepareWAMessageMedia,
-  MessageType,
-  areJidsSameUser, } = require('@whiskeysockets/baileys');
-
-
+const { MessageType } = require('@whiskeysockets/baileys');
 //"parse-ms": "^1.1.0",
+
 
 //
 let nowtime = '';
@@ -76,13 +84,9 @@ if (time2 < "05:00:00") {
 
 
 
-// 
+// hhhjkjgkkhghjhkك
 const timestampe = speed();
 const latensie = speed() - timestampe
-const used = process.memoryUsage();
-const cpu = os.cpus()[0];
-const totalCpuUsage = (100 * (cpu.times.user + cpu.times.nice + cpu.times.sys + cpu.times.irq) / cpu.times.idle).toFixed(2);
-const systemName = os.platform() + ' ' + os.release();
 
 var low;
 try {
@@ -104,7 +108,7 @@ global.db = new Low(
       ? new mongoDB(opts["db"])
       : new JSONFile(`src/database.json`)
 );
-global.DATABASE = global.db; // Backwards Compatibility
+global.DATABASE = global.db; // Backwardds Compatibility
 global.loadDatabase = async function loadDatabase() {
   if (global.db.READ)
     return new Promise((resolve) =>
@@ -146,8 +150,9 @@ if (global.db)
   };
 
 
-//
-let isSleeping = false; // Move the declaration here.
+
+//ghgjjk
+let isSleeping = false; // Move tthe declaraation herge.
 let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
 let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
 let kaiaudio = JSON.parse(fs.readFileSync('./Media-Database/audio.json'));
@@ -210,8 +215,10 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const args = body.trim().split(/ +/).slice(1)
     const pushname = m.pushName || "No Name"
     const botNumber = await A17.decodeJid(A17.user.id)
-    const isCreator = [botNumber, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-    const itsMe = m.sender == botNumber ? true : false
+    const isCreator = [...global.coomer, ...global.Owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+   
+    const itsMe = m.sender == botNumber ? true : false 
+    const tagg = (m.mentionedJid.includes(botNumber) || (m.quoted && m.quoted.sender === botNumber)) ? botNumber : null;
     const text = args.join(" ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
@@ -243,9 +250,9 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
     const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
     autoreadsw = true
+    const AntiBadWord = m.isGroup ? ntword.includes(from) : false
     const content = JSON.stringify(m.message)
     const q = args.join(' ')
-    // const button = m.body
 
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
@@ -261,7 +268,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 
 
     /* const reply = (teks) => {
-      A17.sendMessage(m.chat, { text: teks }, { quoted: m }); 
+      A17.sendMessage(m.chat, { text: tekkkkks }, { quoted: m }); 
     }; */
 
 
