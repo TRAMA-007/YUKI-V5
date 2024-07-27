@@ -742,6 +742,7 @@ Typed *surrender* to surrender and admited defeat`
       'بوت' : 'اسمي يوكي ياخ > <',
       'يوكينا' : 'عيوني',
       'بوتة' : 'بوتة في عينك اسمي يوكي',
+	   'هجهج' : 'هجهج ستار ملك الأفكار', 
     };
 
     const smallinputs = budy.toLowerCase();
