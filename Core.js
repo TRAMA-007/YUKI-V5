@@ -732,6 +732,7 @@ Typed *surrender* to surrender and admited defeat`
     if (responses.hasOwnProperty(smallinputs)) {
       reply(responses[smallinputs]);
     }
+    
 function autoReply(inputText) {
     const specificWord = 'هلا'; // Specify the specific word here
     const replies = [
@@ -746,6 +747,28 @@ function autoReply(inputText) {
         return randomReply;
     }
 }
+
+    // List of replies
+const repliesx = [
+  "That's interesting!",
+  "I see what you mean.",
+  "Tell me more about that.",
+  "Interesting point of view.",
+  "I hadn't thought about it that way before."
+];
+
+// Function to pick a random reply
+function getRandomReply() {
+  return repliesx[Math.floor(Math.random() * repliesx.length)];
+}
+
+// Function to check for specified word and return a random reply
+function checkAndReply(message, specifiedWord) {
+  if (message.includes('وه')) {
+    return getRandomReply();
+      }
+ }
+
 
     //============= [LIST RESPONCE CHECKING START ]================
 
