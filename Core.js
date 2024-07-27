@@ -767,16 +767,7 @@ function autoReply(inputText) {
 }
 
 
- if (smallinput.includes('منت')) {
-   const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
-   const random = typ[Math.floor(Math.random() * typ.length)];
-   reply(random)
-  }
-if (smallinput.includes('مست')) {
-   const typ = ['كبلنيبمليليبليل', 'وانا سءسءسيشيش', 'دددددددددو🍆 🥰'];
-   const random = typ[Math.floor(Math.random() * typ.length)];
-   reply(random)
-  }
+ 
 
  if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
