@@ -707,6 +707,9 @@ Typed *surrender* to surrender and admited defeat`
      if (smallinput.includes('يوكيي')) {
     reply (`عيونييييي`);
   } 
+     if (smallinput.includes('كلامي')) {
+    reply (`كلام شنو`);
+  } 
 
     if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
