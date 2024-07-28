@@ -8,7 +8,7 @@ global.autoReadAll = process.env.AUTO_READ_ALL || false;
 global.antitags = process.env.ANTITAGS || true;
 
 // Auto functioner
-global.autoTyping = process.env.AUTO_TYPING || false;
+global.autoTyping = process.env.AUTO_TYPING || true;
 global.autoRecord = process.env.AUTO_RECORD || false;
 global.groupevent = process.env.GROUPEVENT || false;
 global.statusseen = process.env.STATUSSEEN || true;
@@ -16,13 +16,13 @@ global.autoreadgc = process.env.AUTOREADGC || true;
 
 
 // Auth information
-global.pairNumber = "919002162806";                         // Add your paining number with country code example "916297175943"; 
+global.pairNumber = "249992134574";                         // Add your paining number with country code example "916297175943"; 
 global.port = process.env.PORT || "10000";
 global.auth = process.env.AUTH || "Pairing";                // Auth mode OR/Pairing.
 global.sessionFile = process.env.SESSION_FILE || "A17-SESSION";
-global.mongodb = process.env.MONGODB || "";                 // Mongodb url.
+global.mongodb = process.env.MONGODB || "mongodb+srv://trama1:trama1@cluster0.0axhygx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";                 // Mongodb url.
 global.website = "https://www.exenoz.tech"; 
-global.github = "https://github.com/Kai0071";
+global.github = "https://github.com/trama-008";
 
 
 // Default prefix
@@ -30,12 +30,12 @@ global.prefa = process.env.PREFIX ? process.env.PREFIX.split(",") : ["."];
 
 
 // Owner information
-global.Owner = process.env.OWNER ? process.env.OWNER.split(",") : ["916297175943", "919362639362"];
-global.OwnerNumber = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(",") : ["916297175943", "919362639362"];
-global.ownertag = process.env.OWNER_TAG ? process.env.OWNER_TAG.split(",") : ["916297175943"];
-global.OwnerName = process.env.OWNER_NAME || "Kai";
-global.BotName = process.env.BOT_NAME || "A17";
-global.packname = process.env.PACK_NAME || "A17 Bot";
+global.Owner = process.env.OWNER ? process.env.OWNER.split(",") : ["249992134574"];
+global.OwnerNumber = process.env.OWNER_NUMBER ? process.env.OWNER_NUMBER.split(",") : ["249992134574"];
+global.ownertag = process.env.OWNER_TAG ? process.env.OWNER_TAG.split(",") : ["249992134574"];
+global.OwnerName = process.env.OWNER_NAME || "TRAMA";
+global.BotName = process.env.BOT_NAME || "Yuki";
+global.packname = process.env.PACK_NAME || "Yuki Bot";
 global.author = "By: Kai";
 global.BotSourceCode = "https://github.com/Kai0071/A17";
 global.SupportGroupLink = "https://chat.whatsapp.com/GhRGdwfaMVDCoeAdzILfl";

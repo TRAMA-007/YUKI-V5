@@ -515,8 +515,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     //   }
 
 
-    //     const menulist = `
-    //     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Kai to take your WhatsApp usage into next level.
+    //   const menulist = `
+    //     Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Tramazool to take your WhatsApp usage into next level.
 
     //        「 System Info 」
 
@@ -626,26 +626,26 @@ Typed *surrender* to surrender and admited defeat`
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
 
-
+    /*
     //
     const pickRandom = (arr) => {
       return arr[Math.floor(Math.random() * arr.length)]
     }
 
-    /*
+  
   let smallinput = budy.toLowerCase()
-  if (smallinput.includes('hello')) {
-    reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+  if (smallinput.includes('يوكينا')) {
+    reply (`اسمي ${BotName} عايز حاجة ممكن اساعدك فيها؟`);
   } 
   
-  //if (smallinput.includes('hi')) {
+  if (smallinput.includes('hi')) {
   
-  //   reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
+     reply (`Hello ${pushname}, I am ${BotName}. How can i help you?`);
   
-  // } 
+  } 
   
-  if (smallinput=='kai') {
-      reply (`My Boss is lost in another Multiverse, and I lost the connection with him...`)
+  if (smallinput=='تراما') {
+      reply (`المطور حالياً ضايع في بحر المواجع و مش عارف امتى راجع`)
   }
   
   
@@ -696,9 +696,28 @@ Typed *surrender* to surrender and admited defeat`
   if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
     reply (`Mention not ${pushname} 😇. I am a bot afterall.`);
   }
+
   */
 
+   const smallinput = budy.toLowerCase()
+    if (smallinput.includes('يوكيينا')) {
+    reply (`اسمي ${BotName} عايز حاجة ممكن اساعدك فيها؟`);
+  } 
 
+     if (smallinput.includes('يوكيي')) {
+    reply (`عيونييييي`);
+  } 
+     if (smallinput.includes('كلامي')) {
+    reply (`كلام شنو`);
+  } 
+
+    if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
+  const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
+          let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+          await fs.unlinkSync(encmedia);	    
+   }
+
+    
     const responses = {
 
 
@@ -713,15 +732,79 @@ Typed *surrender* to surrender and admited defeat`
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
-
     };
 
-    const smallinput = budy.toLowerCase();
+    const smallinputs = budy.toLowerCase();
+    
 
-    if (responses.hasOwnProperty(smallinput)) {
-      reply(responses[smallinput]);
-    }
+    if (smallinput.includes('منت')) {
+   const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+  }
+    if (smallinput.includes('مست')) {
+   const typ = ['كبلنيبمليليبليل', 'وانا سءسءسيشيش', 'دددددددددو🍆 🥰'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+  }
 
+    if (smallinput.includes('يوكي')) {
+    reply (`نعم.`);
+  }
+
+     if (smallinput.includes('يوكي') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+	if (isBan) return reply(`ما برد على عبيد`);
+	    if (!isPlana) {
+/*	 if (!isCmd && m.isGroup){
+        const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=zCagsAa7OceIp_VrymmeUAf_7uZ4olpstIc9AViTSq8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+		} */
+      const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
+    const gg = tt[Math.floor(Math.random() * tt.length)];
+    if (isShaq) reply (gg) 
+    // قائمة بروابط الصور المختلفة
+   const imageUrls = [
+ 'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
+ 'https://graph.org/file/8cb96154ceca2e3a7c559.png',
+ 'https://graph.org/file/86c444642b5768dc7d2d5.png',
+ 'https://graph.org/file/67186665580c88684c847.png',
+ 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
+ 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
+ 'https://graph.org/file/cf53ec7f3817161f70e04.png',
+ 'https://graph.org/file/06b1384e5851cb8df6453.png',
+ 'https://graph.org/file/fea1df2cb9c3cbd74208a.png',
+ 'https://graph.org/file/d8348cba6f9caa492f528.png',
+ 'https://graph.org/file/044205e05040b25ae18c0.png',
+ 'https://graph.org/file/3d639c81211176b676c7b.png',
+ 'https://graph.org/file/deaf54cca4d7e8c1645ac.png',
+ 'https://graph.org/file/554aba4cddf27e0cebe10.png',
+ 'https://graph.org/file/643187ff668a557512b66.png',
+ 'https://graph.org/file/9d88ea96e7c88decc3c26.png',
+    ];
+
+    // اختيار رابط عشوائي
+    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
+        const webpBuffer = await sharp(media)
+         .webp() 
+         .toBuffer();
+       // Send sticker usng A17 libray (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
+   }
+	   }
+
+	  if (smallinput.includes('تتر')) {
+    let media = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
+          const webpBuffer = await sharp(media)
+         .webp({ animated: true }) // Set animated to true for animated stickers
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+   }
 
     //============= [LIST RESPONCE CHECKING START ]================
 
@@ -773,7 +856,7 @@ Typed *surrender* to surrender and admited defeat`
            headerType: 4, */
           contextInfo: {
             externalAdreply: {
-              title: "Powered by Kai",
+              title: "Powered by Yuki",
               body: " ",
               thumbnail: fs.readFileSync("Assets/pic2.jpg"),
               mediaType: 1,
