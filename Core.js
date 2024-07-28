@@ -735,8 +735,6 @@ Typed *surrender* to surrender and admited defeat`
       'بوت' : 'اسمي يوكي ياخ > <',
       'يوكينا' : 'عيوني',
       'بوتة' : 'بوتة في عينك اسمي يوكي',
-      'هجهج' : 'هجهج ستار ملك الأفكار',
-      'سلام عليكم' : 'و عليكم السلام', 
     };
 
     const smallinputs = budy.toLowerCase();
@@ -757,10 +755,50 @@ Typed *surrender* to surrender and admited defeat`
     reply (`نعم.`);
   }
 
-  if (smallinput.includes('حضن')) {
-    reply ('يحضنك كلب');
-  }
+     if (smallinput.includes('يوكي') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+	if (isBan) return reply(`ما برد على عبيد`);
+	    if (!isPlana) {
+/*	 if (!isCmd && m.isGroup){
+        const typ = ['plana', 'arona', 'adamxion'];
+        const api = typ[Math.floor(Math.random() * typ.length)];
+        
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=-adAKK1rjZQ0ljfpXOJtrOG0H9nsmrFDP4jrHB3qHDo&sessionId=zCagsAa7OceIp_VrymmeUAf_7uZ4olpstIc9AViTSq8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+		} */
+      const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
+    const gg = tt[Math.floor(Math.random() * tt.length)];
+    if (isShaq) reply (gg) 
+    // قائمة بروابط الصور المختلفة
+   const imageUrls = [
+ 'https://graph.org/file/f8ffca497c6fc0ebc2370.png',
+ 'https://graph.org/file/8cb96154ceca2e3a7c559.png',
+ 'https://graph.org/file/86c444642b5768dc7d2d5.png',
+ 'https://graph.org/file/67186665580c88684c847.png',
+ 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
+ 'https://graph.org/file/9d93b8c642147c0e0fda1.png',
+ 'https://graph.org/file/cf53ec7f3817161f70e04.png',
+ 'https://graph.org/file/06b1384e5851cb8df6453.png',
+ 'https://graph.org/file/fea1df2cb9c3cbd74208a.png',
+ 'https://graph.org/file/d8348cba6f9caa492f528.png',
+ 'https://graph.org/file/044205e05040b25ae18c0.png',
+ 'https://graph.org/file/3d639c81211176b676c7b.png',
+ 'https://graph.org/file/deaf54cca4d7e8c1645ac.png',
+ 'https://graph.org/file/554aba4cddf27e0cebe10.png',
+ 'https://graph.org/file/643187ff668a557512b66.png',
+ 'https://graph.org/file/9d88ea96e7c88decc3c26.png',
+    ];
 
+    // اختيار رابط عشوائي
+    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
+        const webpBuffer = await sharp(media)
+         .webp() 
+         .toBuffer();
+       // Send sticker usng A17 libray (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
+   }
+	   }
 
     //============= [LIST RESPONCE CHECKING START ]================
 
