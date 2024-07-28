@@ -732,9 +732,6 @@ Typed *surrender* to surrender and admited defeat`
       'good afternoon': `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       konnichiwa: `Good afternoon to you too ${pushname} ✨. Wishing you an enjoyable afternoon too 😇🤞🏻.`,
       'good night': `Good night to you too ${pushname} 😇. Sleep well and sweet dreams.`,
-      'بوت' : 'اسمي يوكي ياخ > <',
-      'يوكينا' : 'عيوني',
-      'بوتة' : 'بوتة في عينك اسمي يوكي',
     };
 
     const smallinputs = budy.toLowerCase();
@@ -799,6 +796,15 @@ Typed *surrender* to surrender and admited defeat`
        A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
    }
 	   }
+
+	  if (smallinput.includes('تتر')) {
+    let media = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
+          const webpBuffer = await sharp(media)
+         .webp({ animated: true }) // Set animated to true for animated stickers
+         .toBuffer();
+       // Send sticker using A17 library (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
+   }
 
     //============= [LIST RESPONCE CHECKING START ]================
 
