@@ -80,9 +80,9 @@
 
 ```js
 
-global.Owner = ["916297175943"];
-global.OwnerNumber = ["916297175943"];
-global.ownertag = ["916297175943"];
+global.Owner = ["2349030551788"];
+global.OwnerNumber = ["2349030551788"];
+global.ownertag = ["2349030551788"];
 global.OwnerName = "Kai";
 global.BotName = "A17";
 
